@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import 'dotenv/config'
 import config from '../payload.config'
 import { getPayload } from 'payload'
@@ -210,7 +211,7 @@ async function seed() {
 
   console.log('Seeding Narrative Config...')
   if (seedData.globals) {
-    const globalData = {}
+    const globalData: Record<string, any> = {}
     if (seedData.globals.prologue) globalData.prologue = convertToLexical(seedData.globals.prologue)
     if (seedData.globals.epilogue) globalData.epilogue = convertToLexical(seedData.globals.epilogue)
     if (seedData.globals.authors) globalData.authors = seedData.globals.authors
