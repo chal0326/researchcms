@@ -35,7 +35,7 @@ export default buildConfig({
   collections: [Users, Media, Mountains, Entities, TimelineEvents],
   globals: [NarrativeConfig],
   editor: lexicalEditor(),
-  secret: process.env.PAYLOAD_SECRET || cloudflare.env.PAYLOAD_SECRET || '',
+  secret: process.env.PAYLOAD_SECRET || (cloudflare.env as any).PAYLOAD_SECRET || '',
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },

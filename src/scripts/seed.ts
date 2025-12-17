@@ -8,7 +8,7 @@ import { fileURLToPath } from 'url'
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
-function convertToLexical(slateNodes) {
+function convertToLexical(slateNodes: any) {
   if (!slateNodes || !Array.isArray(slateNodes))
     return {
       root: {
@@ -21,11 +21,11 @@ function convertToLexical(slateNodes) {
       },
     }
 
-  const lexicalChildren = slateNodes.map((node) => {
+  const lexicalChildren = slateNodes.map((node: any) => {
     if (node.type === 'p' || !node.type) {
       return {
         type: 'paragraph',
-        children: (node.children || []).map((child) => {
+        children: (node.children || []).map((child: any) => {
           if (child.text !== undefined) {
             return {
               type: 'text',
