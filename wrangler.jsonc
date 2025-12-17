@@ -22,6 +22,21 @@
       "database_name": "researchcms",
       "remote": true,
     },
+    {
+      "binding": "DB",
+      "database_name": "researchcms-db",
+      "database_id": "8f8b88d4-5396-4122-921a-2895f87b322a",
+    },
+    {
+      "binding": "LEDGER",
+      "database_name": "990-ledger",
+      "database_id": "f1fc7465-5891-45a4-9e52-c1943980218c",
+    },
+    {
+      "binding": "CONTRACTORS",
+      "database_name": "EZPart6Contractors",
+      "database_id": "451d669d-d699-4a52-a0e4-1ec7b7dd865a",
+    },
   ],
   "services": [
     // The service should match the "name" of your worker
@@ -33,7 +48,16 @@
   "r2_buckets": [
     {
       "binding": "R2",
-      "bucket_name": "researchcms","preview_bucket_name": "researchcms",
+      "bucket_name": "researchcms",
+      "preview_bucket_name": "researchcms",
+    },
+    {
+      "binding": "R2_BUCKET",
+      "bucket_name": "researchcms-bucket",
+    },
+    {
+      "binding": "RESEARCH_DOCS",
+      "bucket_name": "research-documents",
     },
     // Create a R2 binding with the binding name "NEXT_INC_CACHE_R2_BUCKET"
     // {

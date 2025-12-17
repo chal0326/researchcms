@@ -9,7 +9,10 @@ import { r2Storage } from '@payloadcms/storage-r2'
 
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
-import { Mountains, Entities, TimelineEvents, NarrativeConfig } from '../payload-schema'
+import { Mountains } from './collections/Mountains'
+import { Entities } from './collections/Entities'
+import { TimelineEvents } from './collections/TimelineEvents'
+import { NarrativeConfig } from './globals/NarrativeConfig'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
