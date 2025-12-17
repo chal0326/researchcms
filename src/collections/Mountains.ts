@@ -6,6 +6,9 @@ export const Mountains: CollectionConfig = {
     useAsTitle: 'title',
     defaultColumns: ['title', 'slug', 'summary'],
   },
+  access: {
+    read: () => true,
+  },
   fields: [
     {
       name: 'title',

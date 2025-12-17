@@ -10,6 +10,9 @@ export const Entities: CollectionConfig = {
     useAsTitle: 'name',
     defaultColumns: ['name', 'type', 'ein', 'd1_id'],
   },
+  access: {
+    read: () => true,
+  },
   fields: [
     {
       name: 'name',

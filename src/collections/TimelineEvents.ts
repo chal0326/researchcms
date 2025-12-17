@@ -10,6 +10,9 @@ export const TimelineEvents: CollectionConfig = {
     useAsTitle: 'title',
     defaultColumns: ['year', 'title', 'mountain'],
   },
+  access: {
+    read: () => true,
+  },
   fields: [
     {
       name: 'id', // Explicit ID matching the markdown if needed, otherwise Payload auto-generates

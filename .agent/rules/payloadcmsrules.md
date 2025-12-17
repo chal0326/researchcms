@@ -540,7 +540,6 @@ Components are defined using **file paths** (not direct imports) in your config:
 
 ```typescript
 import { buildConfig } from 'payload'
-
 export default buildConfig({
   admin: {
     components: {
@@ -549,12 +548,10 @@ export default buildConfig({
         Logo: '/components/Logo',
         Icon: '/components/Icon',
       },
-
       // Navigation
       Nav: '/components/CustomNav',
       beforeNavLinks: ['/components/CustomNavItem'],
       afterNavLinks: ['/components/NavFooter'],
-
       // Header
 
 ```

@@ -6,6 +6,7 @@ import { fileURLToPath } from 'url'
 import { CloudflareContext, getCloudflareContext } from '@opennextjs/cloudflare'
 import { GetPlatformProxyOptions } from 'wrangler'
 import { r2Storage } from '@payloadcms/storage-r2'
+import { mcpPlugin } from '@payloadcms/plugin-mcp'
 
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
@@ -35,18 +36,43 @@ export default buildConfig({
   collections: [Users, Media, Mountains, Entities, TimelineEvents],
   globals: [NarrativeConfig],
   editor: lexicalEditor(),
-  secret: process.env.PAYLOAD_SECRET || (cloudflare.env as any).PAYLOAD_SECRET || '',
+  secret:
+    process.env.PAYLOAD_SECRET ||
+    (cloudflare.env as { PAYLOAD_SECRET?: string }).PAYLOAD_SECRET ||
+    '',
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
   db: sqliteD1Adapter({
     binding: cloudflare.env.D1,
+    logger: true,
     push: false,
   }),
   plugins: [
     r2Storage({
       bucket: cloudflare.env.R2,
       collections: { media: true },
+    }),
+    mcpPlugin({
+      collections: {
+        mountains: {
+          enabled: true,
+          description:
+            'A collection of mountains representing different areas of research/narrative.',
+        },
+        entities: {
+          enabled: true,
+          description: 'Entities (organizations or individuals) involved in the research.',
+        },
+        'timeline-events': {
+          enabled: true,
+          description: 'Specific events linked to researchers or mountains.',
+        },
+        users: {
+          enabled: true,
+          description: 'CMS users.',
+        },
+      },
     }),
   ],
 })
@@ -56,8 +82,9 @@ function getCloudflareContextFromWrangler(): Promise<CloudflareContext> {
   return import(/* webpackIgnore: true */ `${'__wrangler'.replaceAll('_', '')}`).then(
     ({ getPlatformProxy }) =>
       getPlatformProxy({
+        persist: false, // Ensure we don't save anything locally
         environment: process.env.CLOUDFLARE_ENV,
-        remoteBindings: false,
+        remoteBindings: true, // ALWAYS use remote bindings
       } satisfies GetPlatformProxyOptions),
   )
 }
