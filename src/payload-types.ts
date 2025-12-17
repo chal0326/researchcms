@@ -69,6 +69,9 @@ export interface Config {
   collections: {
     users: User;
     media: Media;
+    mountains: Mountain;
+    entities: Entity;
+    'timeline-events': TimelineEvent;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -78,6 +81,9 @@ export interface Config {
   collectionsSelect: {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
+    mountains: MountainsSelect<false> | MountainsSelect<true>;
+    entities: EntitiesSelect<false> | EntitiesSelect<true>;
+    'timeline-events': TimelineEventsSelect<false> | TimelineEventsSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -87,8 +93,12 @@ export interface Config {
     defaultIDType: number;
   };
   fallbackLocale: null;
-  globals: {};
-  globalsSelect: {};
+  globals: {
+    'narrative-config': NarrativeConfig;
+  };
+  globalsSelect: {
+    'narrative-config': NarrativeConfigSelect<false> | NarrativeConfigSelect<true>;
+  };
   locale: null;
   user: User & {
     collection: 'users';
@@ -159,6 +169,114 @@ export interface Media {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "mountains".
+ */
+export interface Mountain {
+  id: number;
+  title: string;
+  /**
+   * URL-friendly identifier
+   */
+  slug: string;
+  icon?: (number | null) | Media;
+  /**
+   * The core argument for how this mountain was captured.
+   */
+  summary?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "entities".
+ */
+export interface Entity {
+  id: number;
+  name: string;
+  type: 'Organization' | 'Person' | 'Fund' | 'Corporation' | 'Government';
+  /**
+   * CRITICAL: The Tax ID used to fetch 990 data from R2 Datamarts.
+   */
+  ein?: string | null;
+  aliases?:
+    | {
+        alias?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  /**
+   * Configuration for fetching external datamart records.
+   */
+  deep_data_pointer?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  /**
+   * Legacy ID from the initial graph analysis.
+   */
+  d1_id?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "timeline-events".
+ */
+export interface TimelineEvent {
+  /**
+   * Internal ID (e.g. "2024-ziklag-exposed")
+   */
+  id: string;
+  year: string;
+  title: string;
+  mountain: number | Mountain;
+  body: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  };
+  /**
+   * Key players involved in this event.
+   */
+  entities?: (number | Entity)[] | null;
+  /**
+   * Raw markdown for provenance/verification.
+   */
+  original_text?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -188,6 +306,18 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'media';
         value: number | Media;
+      } | null)
+    | ({
+        relationTo: 'mountains';
+        value: number | Mountain;
+      } | null)
+    | ({
+        relationTo: 'entities';
+        value: number | Entity;
+      } | null)
+    | ({
+        relationTo: 'timeline-events';
+        value: string | TimelineEvent;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -271,6 +401,52 @@ export interface MediaSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "mountains_select".
+ */
+export interface MountainsSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  icon?: T;
+  summary?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "entities_select".
+ */
+export interface EntitiesSelect<T extends boolean = true> {
+  name?: T;
+  type?: T;
+  ein?: T;
+  aliases?:
+    | T
+    | {
+        alias?: T;
+        id?: T;
+      };
+  deep_data_pointer?: T;
+  d1_id?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "timeline-events_select".
+ */
+export interface TimelineEventsSelect<T extends boolean = true> {
+  id?: T;
+  year?: T;
+  title?: T;
+  mountain?: T;
+  body?: T;
+  entities?: T;
+  original_text?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv_select".
  */
 export interface PayloadKvSelect<T extends boolean = true> {
@@ -308,6 +484,60 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
   batch?: T;
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "narrative-config".
+ */
+export interface NarrativeConfig {
+  id: number;
+  prologue?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  epilogue?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  authors?: string | null;
+  version?: string | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "narrative-config_select".
+ */
+export interface NarrativeConfigSelect<T extends boolean = true> {
+  prologue?: T;
+  epilogue?: T;
+  authors?: T;
+  version?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

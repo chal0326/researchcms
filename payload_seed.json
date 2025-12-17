@@ -1,0 +1,2689 @@
+{
+  "mountains": [
+    {
+      "title": "Government",
+      "slug": "government",
+      "summary": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "The capture of the Government sphere."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Business",
+      "slug": "business",
+      "summary": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "The capture of the Business sphere."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Religion",
+      "slug": "religion",
+      "summary": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "The capture of the Religion sphere."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Media",
+      "slug": "media",
+      "summary": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "The capture of the Media sphere."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Family",
+      "slug": "family",
+      "summary": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "The capture of the Family sphere."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "year": "1993",
+      "title": "The Legal Foundation of Christian Nationalism",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Michael Farris didn't just found another Christian legal organization. Alliance Defending Freedom was designed from the start as a litigation factory, systematically pursuing cases that would establish legal precedent for Christian supremacy."
+            }
+          ]
+        }
+      ],
+      "original_text": "Michael Farris didn't just found another Christian legal organization. Alliance Defending Freedom was designed from the start as a litigation factory, systematically pursuing cases that would establish legal precedent for Christian supremacy.",
+      "entities": [
+        "organization",
+        "Christian",
+        "Alliance Defending Freedom",
+        "Michael Farris",
+        "Michael",
+        "org"
+      ]
+    },
+    {
+      "year": "2005",
+      "title": "The Judicial Capture Machine Begins",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Leonard Leo had been building power within the Federalist Society for years, but founding the Judicial Confirmation Network (later renamed Judicial Crisis Network, now The Concord Fund) marked his transformation from conservative activist to kingmaker."
+            }
+          ]
+        }
+      ],
+      "original_text": "Leonard Leo had been building power within the Federalist Society for years, but founding the Judicial Confirmation Network (later renamed Judicial Crisis Network, now The Concord Fund) marked his transformation from conservative activist to kingmaker.",
+      "entities": [
+        "Federalist Society",
+        "Leonard Leo",
+        "The Concord Fund",
+        "Judicial Crisis Network",
+        "year"
+      ]
+    },
+    {
+      "year": "2010",
+      "title": "Citizens United: The Dam Breaks",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "The Supreme Court's Citizens United decision didn't create dark money in politics, but it removed the last significant barriers to unlimited political spending by corporations and nonprofit organizations."
+            }
+          ]
+        }
+      ],
+      "original_text": "The Supreme Court's Citizens United decision didn't create dark money in politics, but it removed the last significant barriers to unlimited political spending by corporations and nonprofit organizations.",
+      "entities": [
+        "organization",
+        "and",
+        "Supreme Court",
+        "Court",
+        "nonprofit organizations",
+        "Citizens",
+        "Citizens United",
+        "org"
+      ]
+    },
+    {
+      "year": "2012",
+      "title": "The Target Goes Live",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "ERIC launched quietly, a bipartisan collaboration between election officials and the Pew Charitable Trusts designed to help states maintain accurate voter rolls. The system allowed participating states to securely share data, identifying voters who had moved, died, or registered in multiple jurisdictions."
+            }
+          ]
+        }
+      ],
+      "original_text": "ERIC launched quietly, a bipartisan collaboration between election officials and the Pew Charitable Trusts designed to help states maintain accurate voter rolls. The system allowed participating states to securely share data, identifying voters who had moved, died, or registered in multiple jurisdictions.",
+      "entities": [
+        "ERIC",
+        "and",
+        "data"
+      ]
+    },
+    {
+      "year": "2012",
+      "title": "Mitchell Enters the Money Stream",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Cleta Mitchell's appointment to the Bradley Foundation board seemed like just another conservative lawyer joining a conservative foundation. In reality, it was a key piece falling into place."
+            }
+          ]
+        }
+      ],
+      "original_text": "Cleta Mitchell's appointment to the Bradley Foundation board seemed like just another conservative lawyer joining a conservative foundation. In reality, it was a key piece falling into place.",
+      "entities": [
+        "Bradley Foundation",
+        "Cleta Mitchell",
+        "key",
+        "app"
+      ]
+    },
+    {
+      "year": "2012",
+      "title": "Building the Litigation Arsenal",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "J. Christian Adams, a former Justice Department attorney who had built a career pursuing voter fraud allegations that courts repeatedly rejected, founded the Public Interest Legal Foundation with Cleta Mitchell as chairman."
+            }
+          ]
+        }
+      ],
+      "original_text": "J. Christian Adams, a former Justice Department attorney who had built a career pursuing voter fraud allegations that courts repeatedly rejected, founded the Public Interest Legal Foundation with Cleta Mitchell as chairman.",
+      "entities": [
+        "Christian",
+        "Cleta Mitchell",
+        "Christian Adams",
+        "Public Interest Legal Foundation"
+      ]
+    },
+    {
+      "year": "2017",
+      "title": "The Nerve Center of the Network",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Jim DeMint didn't fade into quiet retirement after being pushed out of the Heritage Foundation. He founded the Conservative Partnership Institute, which would become something unprecedented in conservative politics: a coordination hub housing multiple interconnected organizations that shared resources, staff, and strategy while maintaining the appearance of independence."
+            }
+          ]
+        }
+      ],
+      "original_text": "Jim DeMint didn't fade into quiet retirement after being pushed out of the Heritage Foundation. He founded the Conservative Partnership Institute, which would become something unprecedented in conservative politics: a coordination hub housing multiple interconnected organizations that shared resources, staff, and strategy while maintaining the appearance of independence.",
+      "entities": [
+        "organization",
+        "and",
+        "Heritage Foundation",
+        "Conservative Partnership Institute",
+        "source",
+        "Jim DeMint",
+        "app",
+        "org"
+      ]
+    },
+    {
+      "year": "2017",
+      "title": "Leo's Empire Expands",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Leonard Leo orchestrated the rebranding of the Judicial Education Project into The 85 Fund, positioning it as the 501(c)(3) charitable companion to The Concord Fund's 501(c)(4) political operations."
+            }
+          ]
+        }
+      ],
+      "original_text": "Leonard Leo orchestrated the rebranding of the Judicial Education Project into The 85 Fund, positioning it as the 501(c)(3) charitable companion to The Concord Fund's 501(c)(4) political operations.",
+      "entities": [
+        "and",
+        "Leonard Leo",
+        "The Concord Fund",
+        "The 85 Fund",
+        "85 Fund",
+        "Education",
+        "Judicial Education Project"
+      ]
+    },
+    {
+      "year": "2017",
+      "title": "Placing Judges While Building the Docket",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Alliance Defending Freedom's judicial strategy during the Trump administration operated on two tracks simultaneously: placing ideologically committed judges in positions of power, and building the litigation docket those judges would eventually rule on."
+            }
+          ]
+        }
+      ],
+      "original_text": "Alliance Defending Freedom's judicial strategy during the Trump administration operated on two tracks simultaneously: placing ideologically committed judges in positions of power, and building the litigation docket those judges would eventually rule on.",
+      "entities": [
+        "Trump",
+        "and",
+        "Alliance Defending Freedom",
+        "Trump administration"
+      ]
+    },
+    {
+      "year": "2018",
+      "title": "ADF Goes Global",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Alliance Defending Freedom's international expansion revealed the organization's ambitions extended far beyond American courts. Between 2019 and 2021, ADF received $20.9 million from Christian right foundations specifically for international operations, doubling its European spending."
+            }
+          ]
+        }
+      ],
+      "original_text": "Alliance Defending Freedom's international expansion revealed the organization's ambitions extended far beyond American courts. Between 2019 and 2021, ADF received $20.9 million from Christian right foundations specifically for international operations, doubling its European spending.",
+      "entities": [
+        "organization",
+        "Christian",
+        "and",
+        "Alliance Defending Freedom",
+        "American",
+        "ADF",
+        "2019",
+        "foundations",
+        "org"
+      ]
+    },
+    {
+      "year": "2020",
+      "title": "The Big Lie Becomes the Justification",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Donald Trump lost the 2020 presidential election by 306 electoral votes and seven million in the popular vote. Recounts confirmed it. Audits verified it. Sixty-three court cases—many before Trump-appointed judges—found no evidence of fraud."
+            }
+          ]
+        }
+      ],
+      "original_text": "Donald Trump lost the 2020 presidential election by 306 electoral votes and seven million in the popular vote. Recounts confirmed it. Audits verified it. Sixty-three court cases—many before Trump-appointed judges—found no evidence of fraud.",
+      "entities": [
+        "Trump",
+        "and",
+        "Donald Trump",
+        "app"
+      ]
+    },
+    {
+      "year": "2020",
+      "title": "The 85 Fund's Explosive Growth",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Immediately after rebranding from the Judicial Education Project, The 85 Fund raised $65 million in 2020—including $20 million from Donors Trust alone."
+            }
+          ]
+        }
+      ],
+      "original_text": "Immediately after rebranding from the Judicial Education Project, The 85 Fund raised $65 million in 2020—including $20 million from Donors Trust alone.",
+      "entities": [
+        "and",
+        "Donors",
+        "Donors Trust",
+        "The 85 Fund",
+        "85 Fund",
+        "Education",
+        "Judicial Education Project"
+      ]
+    },
+    {
+      "year": "2021-01-02",
+      "title": "\"Just Say the Election Was Corrupt\"",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "The hour-long phone call between Trump and Georgia Secretary of State Brad Raffensperger would become infamous: \"I just want to find 11,780 votes, which is one more than we have.\""
+            }
+          ]
+        }
+      ],
+      "original_text": "The hour-long phone call between Trump and Georgia Secretary of State Brad Raffensperger would become infamous: \"I just want to find 11,780 votes, which is one more than we have.\"",
+      "entities": [
+        "Trump",
+        "and",
+        "Georgia",
+        "Secretary of State",
+        "Brad Raffensperger",
+        "org"
+      ]
+    },
+    {
+      "year": "2021-01-06",
+      "title": "When the Conspiracy Pipeline Turned Violent",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Five people died. One hundred forty police officers were injured. The constitutional order hung by a thread as a mob stormed the Capitol attempting to prevent Biden's certification."
+            }
+          ]
+        }
+      ],
+      "original_text": "Five people died. One hundred forty police officers were injured. The constitutional order hung by a thread as a mob stormed the Capitol attempting to prevent Biden's certification.",
+      "entities": [
+        "Biden"
+      ]
+    },
+    {
+      "year": "2021-01-07",
+      "title": "Mitchell's \"Resignation\" Was Actually Promotion",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "After the Raffensperger call became public, Cleta Mitchell was forced to resign from Foley & Lardner. News coverage treated it as scandal, a fall from grace for a prominent Republican lawyer who had participated in efforts to overturn an election."
+            }
+          ]
+        }
+      ],
+      "original_text": "After the Raffensperger call became public, Cleta Mitchell was forced to resign from Foley & Lardner. News coverage treated it as scandal, a fall from grace for a prominent Republican lawyer who had participated in efforts to overturn an election.",
+      "entities": [
+        "and",
+        "Cleta Mitchell",
+        "Foley & Lardner",
+        "Foley"
+      ]
+    },
+    {
+      "year": "2021-02",
+      "title": "The Education Army Deploys",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "While Mitchell built the legal infrastructure, the network launched its ground war for the \"Education Mountain.\""
+            }
+          ]
+        }
+      ],
+      "original_text": "While Mitchell built the legal infrastructure, the network launched its ground war for the \"Education Mountain.\"",
+      "entities": [
+        "network",
+        "Education",
+        "Education Mountain"
+      ]
+    },
+    {
+      "year": "2021",
+      "title": "Building the Government in Waiting",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Brooke Rollins, Trump's former Director of Domestic Policy, became President and CEO of the America First Policy Institute. The organization positioned itself explicitly as the \"White House in waiting\"—developing policy and vetting personnel for Trump's inevitable return."
+            }
+          ]
+        }
+      ],
+      "original_text": "Brooke Rollins, Trump's former Director of Domestic Policy, became President and CEO of the America First Policy Institute. The organization positioned itself explicitly as the \"White House in waiting\"—developing policy and vetting personnel for Trump's inevitable return.",
+      "entities": [
+        "Trump",
+        "organization",
+        "Policy",
+        "and",
+        "CEO",
+        "President",
+        "White House",
+        "House",
+        "person",
+        "self",
+        "America First Policy Institute",
+        "Brooke Rollins",
+        "org"
+      ]
+    },
+    {
+      "year": "2021-12",
+      "title": "Cultivating State Officials",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Phil Waldron, the retired Army colonel who had circulated a PowerPoint presentation outlining suggestions for overturning the 2020 election, spoke at a Louisiana Voting Commission meeting."
+            }
+          ]
+        }
+      ],
+      "original_text": "Phil Waldron, the retired Army colonel who had circulated a PowerPoint presentation outlining suggestions for overturning the 2020 election, spoke at a Louisiana Voting Commission meeting.",
+      "entities": [
+        "Louisiana",
+        "Phil Waldron",
+        "Louisiana Voting Commission"
+      ]
+    },
+    {
+      "year": "2022",
+      "title": "The Command Center Goes Operational",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "The Election Integrity Network officially launched under the Conservative Partnership Institute umbrella, founded by Cleta Mitchell and funded by the dark money network she helped control."
+            }
+          ]
+        }
+      ],
+      "original_text": "The Election Integrity Network officially launched under the Conservative Partnership Institute umbrella, founded by Cleta Mitchell and funded by the dark money network she helped control.",
+      "entities": [
+        "network",
+        "and",
+        "Cleta Mitchell",
+        "Election",
+        "Election Integrity Network",
+        "Conservative Partnership Institute"
+      ]
+    },
+    {
+      "year": "2022",
+      "title": "The Broken Algorithm They Promoted Anyway",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "The Conservative Partnership Institute incubated EagleAI—an artificial intelligence-powered tool for challenging voter registrations at scale."
+            }
+          ]
+        }
+      ],
+      "original_text": "The Conservative Partnership Institute incubated EagleAI—an artificial intelligence-powered tool for challenging voter registrations at scale.",
+      "entities": [
+        "EagleAI",
+        "Conservative Partnership Institute"
+      ]
+    },
+    {
+      "year": "2022-01-20",
+      "title": "The Propaganda Campaign Launches",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Gateway Pundit published the first in a multi-part series maligning ERIC, written by founder Jim Hoft and relying heavily on J. Christian Adams of the Public Interest Legal Foundation—Mitchell's organization where she served as chairman."
+            }
+          ]
+        }
+      ],
+      "original_text": "Gateway Pundit published the first in a multi-part series maligning ERIC, written by founder Jim Hoft and relying heavily on J. Christian Adams of the Public Interest Legal Foundation—Mitchell's organization where she served as chairman.",
+      "entities": [
+        "organization",
+        "ERIC",
+        "Christian",
+        "and",
+        "Jim Hoft",
+        "Gateway Pundit",
+        "Christian Adams",
+        "Public Interest Legal Foundation",
+        "org"
+      ]
+    },
+    {
+      "year": "2022-01-27",
+      "title": "Louisiana Falls First",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Just one week after the first Gateway Pundit article, Louisiana Secretary of State Kyle Ardoin announced the state would suspend its ERIC membership."
+            }
+          ]
+        }
+      ],
+      "original_text": "Just one week after the first Gateway Pundit article, Louisiana Secretary of State Kyle Ardoin announced the state would suspend its ERIC membership.",
+      "entities": [
+        "ERIC",
+        "Gateway Pundit",
+        "Secretary of State",
+        "Louisiana",
+        "Kyle Ardoin",
+        "Louisiana Secretary of State"
+      ]
+    },
+    {
+      "year": "2022-07",
+      "title": "Building the Flawed Alternative",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "EagleAI NETwork was formally founded by Rick Richards, with the associated nonprofit Valid Vote formed by Compass Legal Group—associated with Cleta Mitchell."
+            }
+          ]
+        }
+      ],
+      "original_text": "EagleAI NETwork was formally founded by Rick Richards, with the associated nonprofit Valid Vote formed by Compass Legal Group—associated with Cleta Mitchell.",
+      "entities": [
+        "Cleta Mitchell",
+        "EagleAI",
+        "Compass Legal Group",
+        "Rick Richards",
+        "Valid Vote",
+        "EagleAI NETwork"
+      ]
+    },
+    {
+      "year": "2022",
+      "title": "Bradley Foundation Funds the Assault",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "The Bradley Foundation's 2022 tax filings revealed $86.4 million in strategic giving, with board secretary Cleta Mitchell helping direct the flow:"
+            }
+          ]
+        }
+      ],
+      "original_text": "The Bradley Foundation's 2022 tax filings revealed $86.4 million in strategic giving, with board secretary Cleta Mitchell helping direct the flow:",
+      "entities": [
+        "Bradley Foundation",
+        "Cleta Mitchell"
+      ]
+    },
+    {
+      "year": "2022",
+      "title": "The Model Legislation Factory",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "While Mitchell focused on election machinery, the Alliance Defending Freedom (ADF) perfected the \"legislation factory.\""
+            }
+          ]
+        }
+      ],
+      "original_text": "While Mitchell focused on election machinery, the Alliance Defending Freedom (ADF) perfected the \"legislation factory.\"",
+      "entities": [
+        "Alliance Defending Freedom",
+        "ADF"
+      ]
+    },
+    {
+      "year": "2023-01",
+      "title": "The Dominoes Begin Falling",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Alabama became the second state to withdraw from ERIC. The new secretary of state had campaigned explicitly on a pledge to withdraw."
+            }
+          ]
+        }
+      ],
+      "original_text": "Alabama became the second state to withdraw from ERIC. The new secretary of state had campaigned explicitly on a pledge to withdraw.",
+      "entities": [
+        "ERIC",
+        "Alabama"
+      ]
+    },
+    {
+      "year": "2023-01",
+      "title": "Mitchell Makes the Introduction",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Cleta Mitchell personally introduced Gina Swoboda of VoteRef to Wyoming Secretary of State Chuck Gray, corresponding about voter identification records."
+            }
+          ]
+        }
+      ],
+      "original_text": "Cleta Mitchell personally introduced Gina Swoboda of VoteRef to Wyoming Secretary of State Chuck Gray, corresponding about voter identification records.",
+      "entities": [
+        "Cleta Mitchell",
+        "Gina Swoboda",
+        "person",
+        "Secretary of State",
+        "Wyoming",
+        "Wyoming Secretary of State"
+      ]
+    },
+    {
+      "year": "2023-02",
+      "title": "Honey Pitches State Officials",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Heather Honey—who had worked on Arizona's sham audit and generated the false data Trump cited on January 6—emailed the Missouri secretary of state's office advocating for \"Return[ing] Control and Management of State Data Back to the States.\""
+            }
+          ]
+        }
+      ],
+      "original_text": "Heather Honey—who had worked on Arizona's sham audit and generated the false data Trump cited on January 6—emailed the Missouri secretary of state's office advocating for \"Return[ing] Control and Management of State Data Back to the States.\"",
+      "entities": [
+        "Trump",
+        "and",
+        "data",
+        "Heather Honey",
+        "Arizona",
+        "Missouri"
+      ]
+    },
+    {
+      "year": "2023-03",
+      "title": "Three States in One Day",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Florida, West Virginia, and Missouri all announced withdrawals from ERIC on the same day."
+            }
+          ]
+        }
+      ],
+      "original_text": "Florida, West Virginia, and Missouri all announced withdrawals from ERIC on the same day.",
+      "entities": [
+        "ERIC",
+        "and",
+        "Florida",
+        "Missouri",
+        "Virginia",
+        "West Virginia"
+      ]
+    },
+    {
+      "year": "2023-03-17",
+      "title": "When Professional Judgment Surrendered to Political Pressure",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Less than two weeks later, Ohio and Iowa announced they would leave ERIC."
+            }
+          ]
+        }
+      ],
+      "original_text": "Less than two weeks later, Ohio and Iowa announced they would leave ERIC.",
+      "entities": [
+        "ERIC",
+        "and",
+        "Ohio",
+        "Iowa"
+      ]
+    },
+    {
+      "year": "2023-03-22",
+      "title": "Destroying First, Planning Never",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Ohio elections director Amanda Grandjean sent an email to officials in several states requesting a \"working group of states that would like to discuss ideas for securely sharing voter history.\""
+            }
+          ]
+        }
+      ],
+      "original_text": "Ohio elections director Amanda Grandjean sent an email to officials in several states requesting a \"working group of states that would like to discuss ideas for securely sharing voter history.\"",
+      "entities": [
+        "and",
+        "elections",
+        "Ohio"
+      ]
+    },
+    {
+      "year": "2023-03",
+      "title": "Buyer's Remorse",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Three months after withdrawing, Alabama's director of elections sent an email asking how to obtain National Change of Address data—critical information for voter roll maintenance that ERIC had provided."
+            }
+          ]
+        }
+      ],
+      "original_text": "Three months after withdrawing, Alabama's director of elections sent an email asking how to obtain National Change of Address data—critical information for voter roll maintenance that ERIC had provided.",
+      "entities": [
+        "ERIC",
+        "elections",
+        "data",
+        "win",
+        "Alabama"
+      ]
+    },
+    {
+      "year": "2023",
+      "title": "Ziklag's Multi-Front Assault",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Ziklag activated three coordinated campaigns, documented in thousands of pages ProPublica would later obtain:"
+            }
+          ]
+        }
+      ],
+      "original_text": "Ziklag activated three coordinated campaigns, documented in thousands of pages ProPublica would later obtain:",
+      "entities": [
+        "and",
+        "Ziklag",
+        "pages",
+        "document",
+        "ProPublica"
+      ]
+    },
+    {
+      "year": "2023-05",
+      "title": "Collecting State Data for the Alternative System",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Cleta Mitchell emailed West Virginia Secretary of State Mac Warner's general counsel and chief of staff:"
+            }
+          ]
+        }
+      ],
+      "original_text": "Cleta Mitchell emailed West Virginia Secretary of State Mac Warner's general counsel and chief of staff:",
+      "entities": [
+        "and",
+        "Cleta Mitchell",
+        "Secretary of State",
+        "Virginia",
+        "West Virginia"
+      ]
+    },
+    {
+      "year": "2023-05",
+      "title": "Virginia Becomes the Eighth",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Virginia announced withdrawal from ERIC."
+            }
+          ]
+        }
+      ],
+      "original_text": "Virginia announced withdrawal from ERIC.",
+      "entities": [
+        "ERIC",
+        "Virginia"
+      ]
+    },
+    {
+      "year": "2023-06",
+      "title": "Exposure Through Litigation",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "American Oversight filed lawsuits against Ohio Secretary of State Frank LaRose and Louisiana Secretary of State Kyle Ardoin to compel release of documents about ERIC withdrawals."
+            }
+          ]
+        }
+      ],
+      "original_text": "American Oversight filed lawsuits against Ohio Secretary of State Frank LaRose and Louisiana Secretary of State Kyle Ardoin to compel release of documents about ERIC withdrawals.",
+      "entities": [
+        "ERIC",
+        "and",
+        "American",
+        "American Oversight",
+        "document",
+        "Secretary of State",
+        "Ohio",
+        "Louisiana",
+        "Kyle Ardoin",
+        "Louisiana Secretary of State",
+        "Frank",
+        "Frank LaRose",
+        "Ohio Secretary of State"
+      ]
+    },
+    {
+      "year": "2023-07-01",
+      "title": "Mitchell Launches Another Dark Money Fund",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Cleta Mitchell formed the Foundation for Accountability Integrity & Research in Elections Fund (FAIR Elections Fund), a new dark money group housed in Conservative Partnership Institute offices."
+            }
+          ]
+        }
+      ],
+      "original_text": "Cleta Mitchell formed the Foundation for Accountability Integrity & Research in Elections Fund (FAIR Elections Fund), a new dark money group housed in Conservative Partnership Institute offices.",
+      "entities": [
+        "Cleta Mitchell",
+        "Election",
+        "Conservative Partnership Institute",
+        "Foundation for Accountability Integrity & Research in Elections Fund"
+      ]
+    },
+    {
+      "year": "2024-02",
+      "title": "VoteRef Weaponized",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Ian Camacho contacted a Texas Senate staffer about voter challenges submitted by \"Totes Legit Votes\" using VoteRef data. He also cited VoteRef data in emails to election officials in Wake County, North Carolina, alleging double voting."
+            }
+          ]
+        }
+      ],
+      "original_text": "Ian Camacho contacted a Texas Senate staffer about voter challenges submitted by \"Totes Legit Votes\" using VoteRef data. He also cited VoteRef data in emails to election officials in Wake County, North Carolina, alleging double voting.",
+      "entities": [
+        "Senate",
+        "data",
+        "North Carolina",
+        "Texas Senate",
+        "Texas"
+      ]
+    },
+    {
+      "year": "2024-03",
+      "title": "The Network Fully Exposed",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Documented published an investigation revealing EagleAI was being deployed through Cleta Mitchell's Election Integrity Network."
+            }
+          ]
+        }
+      ],
+      "original_text": "Documented published an investigation revealing EagleAI was being deployed through Cleta Mitchell's Election Integrity Network.",
+      "entities": [
+        "Cleta Mitchell",
+        "Election",
+        "Election Integrity Network",
+        "EagleAI",
+        "Documented"
+      ]
+    },
+    {
+      "year": "2024",
+      "title": "The Podcast Election",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "While the Biden campaign focused on traditional media, the Trump operation executed a strategy to bypass the mainstream entirely and radicalize a new demographic: young men."
+            }
+          ]
+        }
+      ],
+      "original_text": "While the Biden campaign focused on traditional media, the Trump operation executed a strategy to bypass the mainstream entirely and radicalize a new demographic: young men.",
+      "entities": [
+        "Trump",
+        "and",
+        "Biden",
+        "Biden campaign"
+      ]
+    },
+    {
+      "year": "2024-05",
+      "title": "The Financial Web Exposed",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "The New York Times reported that Conservative Partnership Institute's 2022 filing showed its three highest-paid vendors were Compass Legal Group, Compass Professional, and Compass Property Management."
+            }
+          ]
+        }
+      ],
+      "original_text": "The New York Times reported that Conservative Partnership Institute's 2022 filing showed its three highest-paid vendors were Compass Legal Group, Compass Professional, and Compass Property Management.",
+      "entities": [
+        "and",
+        "Conservative Partnership Institute",
+        "Compass Legal Group",
+        "Compass Property Management",
+        "Compass Professional",
+        "The New York Times",
+        "New York",
+        "New York Times"
+      ]
+    },
+    {
+      "year": "2024-05",
+      "title": "Musk Deploys $200 Million",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Elon Musk founded America PAC, immediately pumping over $200 million of his personal fortune into finding Trump supporters who never vote and getting them to the polls."
+            }
+          ]
+        }
+      ],
+      "original_text": "Elon Musk founded America PAC, immediately pumping over $200 million of his personal fortune into finding Trump supporters who never vote and getting them to the polls.",
+      "entities": [
+        "Trump",
+        "and",
+        "America PAC",
+        "PAC",
+        "person",
+        "Elon Musk"
+      ]
+    },
+    {
+      "year": "2024-06",
+      "title": "Mass Challenges Using the Broken System",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "David Sumrall, head of the Republican Party in Georgia's Bibb County, used EagleAI to challenge the eligibility of nearly 800 voters—close to 1% of the county."
+            }
+          ]
+        }
+      ],
+      "original_text": "David Sumrall, head of the Republican Party in Georgia's Bibb County, used EagleAI to challenge the eligibility of nearly 800 voters—close to 1% of the county.",
+      "entities": [
+        "EagleAI",
+        "Georgia",
+        "Republican Party",
+        "Bibb County",
+        "org"
+      ]
+    },
+    {
+      "year": "2024-07",
+      "title": "Ziklag Fully Exposed",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "ProPublica obtained thousands of internal Ziklag documents, exposing the organization's complete 2024 strategy."
+            }
+          ]
+        }
+      ],
+      "original_text": "ProPublica obtained thousands of internal Ziklag documents, exposing the organization's complete 2024 strategy.",
+      "entities": [
+        "organization",
+        "and",
+        "Ziklag",
+        "document",
+        "ProPublica",
+        "org"
+      ]
+    },
+    {
+      "year": "2024-10",
+      "title": "The Illegal Lottery",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Elon Musk announced a daily sweepstakes giving away $1 million to swing state voters who signed a petition supporting the First and Second Amendments."
+            }
+          ]
+        }
+      ],
+      "original_text": "Elon Musk announced a daily sweepstakes giving away $1 million to swing state voters who signed a petition supporting the First and Second Amendments.",
+      "entities": [
+        "and",
+        "win",
+        "Elon Musk"
+      ]
+    },
+    {
+      "year": "2024-11-04",
+      "title": "The Admission",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Chris Gober, Musk's lawyer, admitted in court the day before the election that the $1 million sweepstakes was never random."
+            }
+          ]
+        }
+      ],
+      "original_text": "Chris Gober, Musk's lawyer, admitted in court the day before the election that the $1 million sweepstakes was never random.",
+      "entities": [
+        "and"
+      ]
+    },
+    {
+      "year": "2024-11",
+      "title": "The Mysterious App",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "At Mar-a-Lago on election night, Elon Musk showed Dana White a custom election tracking app he had built."
+            }
+          ]
+        }
+      ],
+      "original_text": "At Mar-a-Lago on election night, Elon Musk showed Dana White a custom election tracking app he had built.",
+      "entities": [
+        "Elon Musk",
+        "app",
+        "Mar-a-Lago"
+      ]
+    },
+    {
+      "year": "2024-11",
+      "title": "Victory",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Donald Trump won the 2024 presidential election."
+            }
+          ]
+        }
+      ],
+      "original_text": "Donald Trump won the 2024 presidential election.",
+      "entities": [
+        "Trump",
+        "Donald Trump"
+      ]
+    },
+    {
+      "year": "2025-01",
+      "title": "Inauguration",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Trump was inaugurated for his second term."
+            }
+          ]
+        }
+      ],
+      "original_text": "Trump was inaugurated for his second term.",
+      "entities": [
+        "Trump"
+      ]
+    },
+    {
+      "year": "2025",
+      "title": "The Scorecard: Governing by the Mountain",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "For the Ziklag Group and the proponents of the Seven Mountain Mandate, 2025 wasn't just a political win; it was the \"conquest\" of key spheres of influence. Their internal \"scorecard\" for the year read like a prophecy fulfilled."
+            }
+          ]
+        }
+      ],
+      "original_text": "For the Ziklag Group and the proponents of the Seven Mountain Mandate, 2025 wasn't just a political win; it was the \"conquest\" of key spheres of influence. Their internal \"scorecard\" for the year read like a prophecy fulfilled.",
+      "entities": [
+        "and",
+        "Ziklag",
+        "year",
+        "key",
+        "Seven Mountain Mandate",
+        "win",
+        "Ziklag Group"
+      ]
+    },
+    {
+      "year": "2025-07",
+      "title": "The Johnson Amendment Dies",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "The IRS formalized what Trump's 2017 executive order began, settling with the National Religious Broadcasters in a lawsuit that officially established churches could endorse candidates without tax consequences."
+            }
+          ]
+        }
+      ],
+      "original_text": "The IRS formalized what Trump's 2017 executive order began, settling with the National Religious Broadcasters in a lawsuit that officially established churches could endorse candidates without tax consequences.",
+      "entities": [
+        "Trump",
+        "and",
+        "IRS"
+      ]
+    },
+    {
+      "year": "2025-08-25",
+      "title": "The Fox Guards the Henhouse",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Heather Honey—Mitchell's protégé, key figure in the Arizona audit, spreader of election conspiracies Trump cited on January 6—was appointed to the Department of Homeland Security as deputy assistant secretary of election integrity."
+            }
+          ]
+        }
+      ],
+      "original_text": "Heather Honey—Mitchell's protégé, key figure in the Arizona audit, spreader of election conspiracies Trump cited on January 6—was appointed to the Department of Homeland Security as deputy assistant secretary of election integrity.",
+      "entities": [
+        "Trump",
+        "and",
+        "key",
+        "Department of Homeland Security",
+        "Heather Honey",
+        "Arizona",
+        "app"
+      ]
+    },
+    {
+      "year": "2025-09",
+      "title": "\"She Is Part of an Effort to Delegitimize Elections\"",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "State election officials warned that Honey's DHS appointment would erode trust."
+            }
+          ]
+        }
+      ],
+      "original_text": "State election officials warned that Honey's DHS appointment would erode trust.",
+      "entities": [
+        "DHS",
+        "app"
+      ]
+    },
+    {
+      "year": "2025-10",
+      "title": "The $150,000 Reward",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Gina Swoboda, founder of VoteRef and former Trump campaign organizer, earned $150,000 in a taxpayer-funded role advising on election policy."
+            }
+          ]
+        }
+      ],
+      "original_text": "Gina Swoboda, founder of VoteRef and former Trump campaign organizer, earned $150,000 in a taxpayer-funded role advising on election policy.",
+      "entities": [
+        "Trump",
+        "and",
+        "Gina Swoboda",
+        "org"
+      ]
+    },
+    {
+      "year": "2025-11",
+      "title": "The Final Rewrite",
+      "mountain": "government",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "With the government captured, the courts secured, and the opposition dismantled, the network turned to its ultimate objective: rewriting the rules permanently."
+            }
+          ]
+        }
+      ],
+      "original_text": "With the government captured, the courts secured, and the opposition dismantled, the network turned to its ultimate objective: rewriting the rules permanently.",
+      "entities": [
+        "network",
+        "and"
+      ]
+    },
+    {
+      "year": "1999",
+      "title": "The Dark Money ATM Opens for Business",
+      "mountain": "business",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Kimberly O. Dennis didn't invent donor-advised funds, but she perfected their use as political weapons. When she co-founded Donors Trust with Whitney Ball, they created what would become known as \"the dark money ATM of the right.\""
+            }
+          ]
+        }
+      ],
+      "original_text": "Kimberly O. Dennis didn't invent donor-advised funds, but she perfected their use as political weapons. When she co-founded Donors Trust with Whitney Ball, they created what would become known as \"the dark money ATM of the right.\"",
+      "entities": [
+        "Donors",
+        "Donors Trust",
+        "Kimberly O. Dennis",
+        "Whitney Ball"
+      ]
+    },
+    {
+      "year": "2015",
+      "title": "The Billionaire Enters the Arena",
+      "mountain": "business",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Richard Uihlein made his fortune in shipping supplies—packing materials, industrial shipping products, the unglamorous infrastructure of American commerce. His company, Uline, generated billions in revenue from mundane necessities."
+            }
+          ]
+        }
+      ],
+      "original_text": "Richard Uihlein made his fortune in shipping supplies—packing materials, industrial shipping products, the unglamorous infrastructure of American commerce. His company, Uline, generated billions in revenue from mundane necessities.",
+      "entities": [
+        "American",
+        "revenue",
+        "Richard Uihlein",
+        "Uline"
+      ]
+    },
+    {
+      "year": "2021-05",
+      "title": "Follow the Money to VoteRef",
+      "mountain": "business",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Richard Uihlein donated $1.5 million to Restoration PAC."
+            }
+          ]
+        }
+      ],
+      "original_text": "Richard Uihlein donated $1.5 million to Restoration PAC.",
+      "entities": [
+        "PAC",
+        "Richard Uihlein",
+        "Restoration PAC"
+      ]
+    },
+    {
+      "year": "2021",
+      "title": "Dark Money's Record Year",
+      "mountain": "business",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Donors Trust distributed a record $192 million in 2021, cementing its position as the central hub of conservative dark money."
+            }
+          ]
+        }
+      ],
+      "original_text": "Donors Trust distributed a record $192 million in 2021, cementing its position as the central hub of conservative dark money.",
+      "entities": [
+        "Donors",
+        "Donors Trust"
+      ]
+    },
+    {
+      "year": "2021-08",
+      "title": "The Biggest Political Donation in American History",
+      "mountain": "business",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Barre Seid, a 90-year-old electronics magnate, transferred his entire company—Tripp Lite, worth $1.65 billion—to Leonard Leo's Marble Freedom Trust."
+            }
+          ]
+        }
+      ],
+      "original_text": "Barre Seid, a 90-year-old electronics magnate, transferred his entire company—Tripp Lite, worth $1.65 billion—to Leonard Leo's Marble Freedom Trust.",
+      "entities": [
+        "Leonard Leo",
+        "Marble Freedom Trust",
+        "Barre Seid",
+        "year",
+        "Tripp Lite"
+      ]
+    },
+    {
+      "year": "2022",
+      "title": "Leo's Self-Dealing Machine Fully Revealed",
+      "mountain": "business",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Tax filings revealed the sophisticated financial web Leonard Leo had constructed, showing how dark money enriched operatives while funding political objectives."
+            }
+          ]
+        }
+      ],
+      "original_text": "Tax filings revealed the sophisticated financial web Leonard Leo had constructed, showing how dark money enriched operatives while funding political objectives.",
+      "entities": [
+        "Leonard Leo",
+        "financial",
+        "win"
+      ]
+    },
+    {
+      "year": "2023-06",
+      "title": "Mitchell's Fundraising Document Exposed",
+      "mountain": "business",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "A planning document co-authored by Cleta Mitchell and Rick Richards described plans to raise \"private contributions\" for EagleAI from Donors Trust—the dark money ATM of the right."
+            }
+          ]
+        }
+      ],
+      "original_text": "A planning document co-authored by Cleta Mitchell and Rick Richards described plans to raise \"private contributions\" for EagleAI from Donors Trust—the dark money ATM of the right.",
+      "entities": [
+        "and",
+        "Donors",
+        "Donors Trust",
+        "Cleta Mitchell",
+        "EagleAI",
+        "Rick Richards",
+        "document"
+      ]
+    },
+    {
+      "year": "2023",
+      "title": "Uihlein Floods the Zone",
+      "mountain": "business",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Richard Uihlein's giving reached unprecedented levels:"
+            }
+          ]
+        }
+      ],
+      "original_text": "Richard Uihlein's giving reached unprecedented levels:",
+      "entities": [
+        "Richard Uihlein"
+      ]
+    },
+    {
+      "year": "2025",
+      "title": "The Final Dark Money Push",
+      "mountain": "business",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Kimberly Dennis oversaw Searle Freedom Trust's dissolution, distributing its final $59 million."
+            }
+          ]
+        }
+      ],
+      "original_text": "Kimberly Dennis oversaw Searle Freedom Trust's dissolution, distributing its final $59 million.",
+      "entities": [
+        "Kimberly Dennis",
+        "Searle Freedom Trust"
+      ]
+    },
+    {
+      "year": "2009",
+      "title": "When Silicon Valley Met Sunday Morning",
+      "mountain": "religion",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Ken Eldred represented something new in evangelical politics: a tech entrepreneur who understood data analytics better than most political consultants. United In Purpose brought Silicon Valley sophistication to church mobilization, turning faith into spreadsheets and prayer lists into precinct-level voter files."
+            }
+          ]
+        }
+      ],
+      "original_text": "Ken Eldred represented something new in evangelical politics: a tech entrepreneur who understood data analytics better than most political consultants. United In Purpose brought Silicon Valley sophistication to church mobilization, turning faith into spreadsheets and prayer lists into precinct-level voter files.",
+      "entities": [
+        "and",
+        "Ken Eldred",
+        "Silicon Valley",
+        "data",
+        "files",
+        "analytics",
+        "United In Purpose"
+      ]
+    },
+    {
+      "year": "2013",
+      "title": "The Theology of Conquest",
+      "mountain": "religion",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Lance Wallnau didn't invent dominion theology, but he packaged it perfectly for modern evangelical audiences. The Seven Mountain Mandate provided both theological justification and strategic framework for Christian nationalist political activism."
+            }
+          ]
+        }
+      ],
+      "original_text": "Lance Wallnau didn't invent dominion theology, but he packaged it perfectly for modern evangelical audiences. The Seven Mountain Mandate provided both theological justification and strategic framework for Christian nationalist political activism.",
+      "entities": [
+        "Christian",
+        "and",
+        "Christian nationalist",
+        "Lance Wallnau",
+        "Seven Mountain Mandate"
+      ]
+    },
+    {
+      "year": "2016",
+      "title": "Proof the Machine Could Deliver",
+      "mountain": "religion",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "United In Purpose deployed their data operation for Trump's campaign, using the sophisticated evangelical voter models Eldred had built over seven years. The targeting was precise: identify low-propensity evangelical voters who agreed with conservative positions but had never participated in elections, then mobilize them with microtargeted messaging."
+            }
+          ]
+        }
+      ],
+      "original_text": "United In Purpose deployed their data operation for Trump's campaign, using the sophisticated evangelical voter models Eldred had built over seven years. The targeting was precise: identify low-propensity evangelical voters who agreed with conservative positions but had never participated in elections, then mobilize them with microtargeted messaging.",
+      "entities": [
+        "Trump",
+        "elections",
+        "data",
+        "United In Purpose",
+        "year"
+      ]
+    },
+    {
+      "year": "2017",
+      "title": "The Wall Between Church and State Begins to Crumble",
+      "mountain": "religion",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Four months into his presidency, Trump signed Executive Order 13798, directing the IRS to exercise \"maximum enforcement discretion\" regarding the Johnson Amendment."
+            }
+          ]
+        }
+      ],
+      "original_text": "Four months into his presidency, Trump signed Executive Order 13798, directing the IRS to exercise \"maximum enforcement discretion\" regarding the Johnson Amendment.",
+      "entities": [
+        "Trump",
+        "IRS",
+        "Johnson",
+        "Executive Order 13798",
+        "Johnson Amendment",
+        "John"
+      ]
+    },
+    {
+      "year": "2018",
+      "title": "Ziklag: When Billionaires Go Dark",
+      "mountain": "religion",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Ken Eldred founded Ziklag with a simple membership requirement: $25 million minimum net worth. This wasn't a fundraising organization for millionaires to support. This was billionaires coordinating with each other, pooling resources for political operations conducted in complete secrecy."
+            }
+          ]
+        }
+      ],
+      "original_text": "Ken Eldred founded Ziklag with a simple membership requirement: $25 million minimum net worth. This wasn't a fundraising organization for millionaires to support. This was billionaires coordinating with each other, pooling resources for political operations conducted in complete secrecy.",
+      "entities": [
+        "organization",
+        "Ziklag",
+        "Ken Eldred",
+        "source",
+        "org"
+      ]
+    },
+    {
+      "year": "2023-01",
+      "title": "The Theology of Absolution: King Cyrus",
+      "mountain": "religion",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "As legal challenges mounted against Donald Trump, the \"Religion Mountain\" deployed a specific theological framework to neutralize moral dissonance among the base: \"Vessel Theology.\""
+            }
+          ]
+        }
+      ],
+      "original_text": "As legal challenges mounted against Donald Trump, the \"Religion Mountain\" deployed a specific theological framework to neutralize moral dissonance among the base: \"Vessel Theology.\"",
+      "entities": [
+        "Trump",
+        "Donald Trump",
+        "Religion",
+        "Religion Mountain"
+      ]
+    },
+    {
+      "year": "2023",
+      "title": "The Ziklag Triad: Checkmate, Steeplechase, Watchtower",
+      "mountain": "religion",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "While Mitchell built the election integrity infrastructure, the Ziklag Group—the secretive coalition of ultra-wealthy Christian donors—launched three targeted operations to secure the 2024 election. They didn't just donate; they operationalized \"spiritual warfare.\""
+            }
+          ]
+        }
+      ],
+      "original_text": "While Mitchell built the election integrity infrastructure, the Ziklag Group—the secretive coalition of ultra-wealthy Christian donors—launched three targeted operations to secure the 2024 election. They didn't just donate; they operationalized \"spiritual warfare.\"",
+      "entities": [
+        "Christian",
+        "Ziklag",
+        "Ziklag Group"
+      ]
+    },
+    {
+      "year": "2012",
+      "title": "Recruiting the Next Generation",
+      "mountain": "media",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Charlie Kirk was 18 when he founded Turning Point USA. The origin story emphasized youth conservative activism on college campuses—a student organization promoting free markets and limited government."
+            }
+          ]
+        }
+      ],
+      "original_text": "Charlie Kirk was 18 when he founded Turning Point USA. The origin story emphasized youth conservative activism on college campuses—a student organization promoting free markets and limited government.",
+      "entities": [
+        "organization",
+        "and",
+        "Charlie Kirk",
+        "USA",
+        "Turning Point USA",
+        "Kirk",
+        "free markets",
+        "org"
+      ]
+    },
+    {
+      "year": "2019",
+      "title": "The Deployment Mechanism",
+      "mountain": "media",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Charlie Kirk spun off Turning Point Action as a 501(c)(4) political arm of Turning Point USA, completing the organizational structure that would eventually take over Trump's 2024 ground game."
+            }
+          ]
+        }
+      ],
+      "original_text": "Charlie Kirk spun off Turning Point Action as a 501(c)(4) political arm of Turning Point USA, completing the organizational structure that would eventually take over Trump's 2024 ground game.",
+      "entities": [
+        "Trump",
+        "organization",
+        "Charlie Kirk",
+        "USA",
+        "Turning Point USA",
+        "Turning Point Action",
+        "Kirk",
+        "org"
+      ]
+    },
+    {
+      "year": "2022-05",
+      "title": "The Christian Media Nexus",
+      "mountain": "media",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Salem Media Group released \"2000 Mules,\" the film by Dinesh D'Souza that would become the primary vehicle for spreading the \"Big Lie\" to evangelical audiences."
+            }
+          ]
+        }
+      ],
+      "original_text": "Salem Media Group released \"2000 Mules,\" the film by Dinesh D'Souza that would become the primary vehicle for spreading the \"Big Lie\" to evangelical audiences.",
+      "entities": [
+        "Media",
+        "Big Lie",
+        "Salem Media Group",
+        "Dinesh D'Souza"
+      ]
+    },
+    {
+      "year": "2022-10",
+      "title": "When the Richest Man Bought the Megaphone",
+      "mountain": "media",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Elon Musk purchased Twitter (rebranded as X) for $44 billion, fundamentally altering the information environment for American politics."
+            }
+          ]
+        }
+      ],
+      "original_text": "Elon Musk purchased Twitter (rebranded as X) for $44 billion, fundamentally altering the information environment for American politics.",
+      "entities": [
+        "and",
+        "American",
+        "Elon Musk"
+      ]
+    },
+    {
+      "year": "2024-04",
+      "title": "Outsourcing the Presidential Ground Game",
+      "mountain": "media",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Turning Point Action announced an official partnership with the Trump campaign, taking over ground game operations in swing states through \"Chase the Vote.\""
+            }
+          ]
+        }
+      ],
+      "original_text": "Turning Point Action announced an official partnership with the Trump campaign, taking over ground game operations in swing states through \"Chase the Vote.\"",
+      "entities": [
+        "Trump",
+        "Turning Point Action",
+        "win"
+      ]
+    },
+    {
+      "year": "2024-07",
+      "title": "\"You Won't Have to Vote Anymore\"",
+      "mountain": "media",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "Turning Point Action held its \"Believers' Summit\" rally in West Palm Beach, Florida—one of 22 church-based events in six swing states."
+            }
+          ]
+        }
+      ],
+      "original_text": "Turning Point Action held its \"Believers' Summit\" rally in West Palm Beach, Florida—one of 22 church-based events in six swing states.",
+      "entities": [
+        "Turning Point Action",
+        "events",
+        "win",
+        "Florida"
+      ]
+    },
+    {
+      "year": "2024-08",
+      "title": "The Fraudulent Ground Game",
+      "mountain": "media",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "The Trump campaign outsourced canvassing to an unprecedented operational merger: **Turning Point Action (Religion) and America PAC (Tech).**"
+            }
+          ]
+        }
+      ],
+      "original_text": "The Trump campaign outsourced canvassing to an unprecedented operational merger: **Turning Point Action (Religion) and America PAC (Tech).**",
+      "entities": [
+        "Trump",
+        "and",
+        "America PAC",
+        "PAC",
+        "Turning Point Action",
+        "source",
+        "Religion"
+      ]
+    },
+    {
+      "year": "1977",
+      "title": "The Ministry That Would Become a Political Machine",
+      "mountain": "family",
+      "body": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "text": "James Dobson founded Focus on the Family in Colorado Springs, believing evangelical Christians needed guidance on raising children according to biblical principles. His daily radio broadcasts reached millions, dispensing parenting advice wrapped in conservative theology."
+            }
+          ]
+        }
+      ],
+      "original_text": "James Dobson founded Focus on the Family in Colorado Springs, believing evangelical Christians needed guidance on raising children according to biblical principles. His daily radio broadcasts reached millions, dispensing parenting advice wrapped in conservative theology.",
+      "entities": [
+        "James Dobson",
+        "Christian",
+        "Colorado",
+        "children",
+        "Focus on the Family",
+        "app"
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "name": "organization",
+      "type": "Organization",
+      "d1_id": "name-organization"
+    },
+    {
+      "name": "Christian",
+      "type": "Organization",
+      "d1_id": "name-christian"
+    },
+    {
+      "name": "Alliance Defending Freedom",
+      "type": "Organization",
+      "d1_id": "ein-541660459"
+    },
+    {
+      "name": "Michael Farris",
+      "type": "Organization",
+      "d1_id": "name-michael-farris"
+    },
+    {
+      "name": "Michael",
+      "type": "Person",
+      "d1_id": "name-michael"
+    },
+    {
+      "name": "org",
+      "type": "Organization",
+      "d1_id": "name-org"
+    },
+    {
+      "name": "Federalist Society",
+      "type": "Organization",
+      "d1_id": "name-federalist-society"
+    },
+    {
+      "name": "Leonard Leo",
+      "type": "Person",
+      "d1_id": "name-leonard-leo"
+    },
+    {
+      "name": "The Concord Fund",
+      "type": "Organization",
+      "d1_id": "ein-202303252"
+    },
+    {
+      "name": "Judicial Crisis Network",
+      "type": "Organization",
+      "d1_id": "name-judicial-crisis-network"
+    },
+    {
+      "name": "year",
+      "type": "Person",
+      "d1_id": "name-year"
+    },
+    {
+      "name": "and",
+      "type": "Organization",
+      "d1_id": "name-and"
+    },
+    {
+      "name": "Supreme Court",
+      "type": "Organization",
+      "d1_id": "name-supreme-court"
+    },
+    {
+      "name": "Court",
+      "type": "Organization",
+      "d1_id": "name-court"
+    },
+    {
+      "name": "nonprofit organizations",
+      "type": "Organization",
+      "d1_id": "name-nonprofit-organizations"
+    },
+    {
+      "name": "Citizens",
+      "type": "Person",
+      "d1_id": "name-citizens"
+    },
+    {
+      "name": "Citizens United",
+      "type": "Organization",
+      "d1_id": "ein-911433368.0"
+    },
+    {
+      "name": "ERIC",
+      "type": "Organization",
+      "d1_id": "name-eric"
+    },
+    {
+      "name": "data",
+      "type": "Person",
+      "d1_id": "name-data"
+    },
+    {
+      "name": "Bradley Foundation",
+      "type": "Organization",
+      "d1_id": "ein-330771070.0"
+    },
+    {
+      "name": "Cleta Mitchell",
+      "type": "Organization",
+      "d1_id": "name-cleta-mitchell"
+    },
+    {
+      "name": "key",
+      "type": "Organization",
+      "d1_id": "name-key"
+    },
+    {
+      "name": "app",
+      "type": "Organization",
+      "d1_id": "name-app"
+    },
+    {
+      "name": "Christian Adams",
+      "type": "Person",
+      "d1_id": "name-christian-adams"
+    },
+    {
+      "name": "Public Interest Legal Foundation",
+      "type": "Organization",
+      "d1_id": "ein-454355641"
+    },
+    {
+      "name": "Heritage Foundation",
+      "type": "Organization",
+      "d1_id": "ein-237327730"
+    },
+    {
+      "name": "Conservative Partnership Institute",
+      "type": "Organization",
+      "d1_id": "ein-821470217"
+    },
+    {
+      "name": "source",
+      "type": "Organization",
+      "d1_id": "name-source"
+    },
+    {
+      "name": "Jim DeMint",
+      "type": "Person",
+      "d1_id": "name-jim-demint"
+    },
+    {
+      "name": "The 85 Fund",
+      "type": "Organization",
+      "d1_id": "name-the-85-fund"
+    },
+    {
+      "name": "85 Fund",
+      "type": "Organization",
+      "d1_id": "name-85-fund"
+    },
+    {
+      "name": "Education",
+      "type": "Organization",
+      "d1_id": "name-education"
+    },
+    {
+      "name": "Judicial Education Project",
+      "type": "Organization",
+      "d1_id": "name-judicial-education-project"
+    },
+    {
+      "name": "Trump",
+      "type": "Organization",
+      "d1_id": "name-trump"
+    },
+    {
+      "name": "Trump administration",
+      "type": "Organization",
+      "d1_id": "name-trump-administration"
+    },
+    {
+      "name": "American",
+      "type": "Organization",
+      "d1_id": "name-american"
+    },
+    {
+      "name": "ADF",
+      "type": "Organization",
+      "d1_id": "name-adf"
+    },
+    {
+      "name": "2019",
+      "type": "Organization",
+      "d1_id": "name-2019"
+    },
+    {
+      "name": "foundations",
+      "type": "Organization",
+      "d1_id": "name-foundations"
+    },
+    {
+      "name": "Donald Trump",
+      "type": "Person",
+      "d1_id": "name-donald-trump"
+    },
+    {
+      "name": "Donors",
+      "type": "Organization",
+      "d1_id": "name-donors"
+    },
+    {
+      "name": "Donors Trust",
+      "type": "Organization",
+      "d1_id": "ein-522166327"
+    },
+    {
+      "name": "Georgia",
+      "type": "Organization",
+      "d1_id": "name-georgia"
+    },
+    {
+      "name": "Secretary of State",
+      "type": "Organization",
+      "d1_id": "name-secretary-of-state"
+    },
+    {
+      "name": "Brad Raffensperger",
+      "type": "Person",
+      "d1_id": "name-brad-raffensperger"
+    },
+    {
+      "name": "Biden",
+      "type": "Person",
+      "d1_id": "name-biden"
+    },
+    {
+      "name": "Foley & Lardner",
+      "type": "Organization",
+      "d1_id": "name-foley-lardner"
+    },
+    {
+      "name": "Foley",
+      "type": "Organization",
+      "d1_id": "name-foley"
+    },
+    {
+      "name": "network",
+      "type": "Organization",
+      "d1_id": "name-network"
+    },
+    {
+      "name": "Education Mountain",
+      "type": "Organization",
+      "d1_id": "name-education-mountain"
+    },
+    {
+      "name": "Policy",
+      "type": "Organization",
+      "d1_id": "name-policy"
+    },
+    {
+      "name": "CEO",
+      "type": "Person",
+      "d1_id": "name-ceo"
+    },
+    {
+      "name": "President",
+      "type": "Person",
+      "d1_id": "name-president"
+    },
+    {
+      "name": "White House",
+      "type": "Organization",
+      "d1_id": "name-white-house"
+    },
+    {
+      "name": "House",
+      "type": "Organization",
+      "d1_id": "name-house"
+    },
+    {
+      "name": "person",
+      "type": "Person",
+      "d1_id": "name-person"
+    },
+    {
+      "name": "self",
+      "type": "Organization",
+      "d1_id": "name-self"
+    },
+    {
+      "name": "America First Policy Institute",
+      "type": "Organization",
+      "d1_id": "name-america-first-policy-institute"
+    },
+    {
+      "name": "Brooke Rollins",
+      "type": "Person",
+      "d1_id": "name-brooke-rollins"
+    },
+    {
+      "name": "Louisiana",
+      "type": "Organization",
+      "d1_id": "name-louisiana"
+    },
+    {
+      "name": "Phil Waldron",
+      "type": "Person",
+      "d1_id": "name-phil-waldron"
+    },
+    {
+      "name": "Louisiana Voting Commission",
+      "type": "Organization",
+      "d1_id": "name-louisiana-voting-commission"
+    },
+    {
+      "name": "Election",
+      "type": "Organization",
+      "d1_id": "name-election"
+    },
+    {
+      "name": "Election Integrity Network",
+      "type": "Organization",
+      "d1_id": "name-election-integrity-network"
+    },
+    {
+      "name": "EagleAI",
+      "type": "Organization",
+      "d1_id": "ein-462267879.0"
+    },
+    {
+      "name": "Jim Hoft",
+      "type": "Organization",
+      "d1_id": "name-jim-hoft"
+    },
+    {
+      "name": "Gateway Pundit",
+      "type": "Organization",
+      "d1_id": "name-gateway-pundit"
+    },
+    {
+      "name": "Kyle Ardoin",
+      "type": "Person",
+      "d1_id": "name-kyle-ardoin"
+    },
+    {
+      "name": "Louisiana Secretary of State",
+      "type": "Organization",
+      "d1_id": "name-louisiana-secretary-of-state"
+    },
+    {
+      "name": "Compass Legal Group",
+      "type": "Organization",
+      "d1_id": "name-compass-legal-group"
+    },
+    {
+      "name": "Rick Richards",
+      "type": "Person",
+      "d1_id": "name-rick-richards"
+    },
+    {
+      "name": "Valid Vote",
+      "type": "Organization",
+      "d1_id": "name-valid-vote"
+    },
+    {
+      "name": "EagleAI NETwork",
+      "type": "Organization",
+      "d1_id": "name-eagleai-network"
+    },
+    {
+      "name": "Alabama",
+      "type": "Organization",
+      "d1_id": "name-alabama"
+    },
+    {
+      "name": "Gina Swoboda",
+      "type": "Person",
+      "d1_id": "name-gina-swoboda"
+    },
+    {
+      "name": "Wyoming",
+      "type": "Organization",
+      "d1_id": "name-wyoming"
+    },
+    {
+      "name": "Wyoming Secretary of State",
+      "type": "Organization",
+      "d1_id": "name-wyoming-secretary-of-state"
+    },
+    {
+      "name": "Heather Honey",
+      "type": "Organization",
+      "d1_id": "name-heather-honey"
+    },
+    {
+      "name": "Arizona",
+      "type": "Organization",
+      "d1_id": "name-arizona"
+    },
+    {
+      "name": "Missouri",
+      "type": "Organization",
+      "d1_id": "name-missouri"
+    },
+    {
+      "name": "Florida",
+      "type": "Organization",
+      "d1_id": "name-florida"
+    },
+    {
+      "name": "Virginia",
+      "type": "Organization",
+      "d1_id": "name-virginia"
+    },
+    {
+      "name": "West Virginia",
+      "type": "Organization",
+      "d1_id": "name-west-virginia"
+    },
+    {
+      "name": "Ohio",
+      "type": "Organization",
+      "d1_id": "name-ohio"
+    },
+    {
+      "name": "Iowa",
+      "type": "Organization",
+      "d1_id": "name-iowa"
+    },
+    {
+      "name": "elections",
+      "type": "Organization",
+      "d1_id": "name-elections"
+    },
+    {
+      "name": "win",
+      "type": "Organization",
+      "d1_id": "name-win"
+    },
+    {
+      "name": "Ziklag",
+      "type": "Organization",
+      "d1_id": "ein-392656594.0"
+    },
+    {
+      "name": "pages",
+      "type": "Person",
+      "d1_id": "name-pages"
+    },
+    {
+      "name": "document",
+      "type": "Organization",
+      "d1_id": "name-document"
+    },
+    {
+      "name": "ProPublica",
+      "type": "Organization",
+      "d1_id": "ein-142007220.0"
+    },
+    {
+      "name": "American Oversight",
+      "type": "Organization",
+      "d1_id": "name-american-oversight"
+    },
+    {
+      "name": "Frank",
+      "type": "Person",
+      "d1_id": "name-frank"
+    },
+    {
+      "name": "Frank LaRose",
+      "type": "Person",
+      "d1_id": "name-frank-larose"
+    },
+    {
+      "name": "Ohio Secretary of State",
+      "type": "Organization",
+      "d1_id": "name-ohio-secretary-of-state"
+    },
+    {
+      "name": "Foundation for Accountability Integrity & Research in Elections Fund",
+      "type": "Organization",
+      "d1_id": "name-foundation-for-accountability-integrity-research-in-elections-fund"
+    },
+    {
+      "name": "Senate",
+      "type": "Organization",
+      "d1_id": "name-senate"
+    },
+    {
+      "name": "North Carolina",
+      "type": "Organization",
+      "d1_id": "name-north-carolina"
+    },
+    {
+      "name": "Texas Senate",
+      "type": "Organization",
+      "d1_id": "name-texas-senate"
+    },
+    {
+      "name": "Texas",
+      "type": "Organization",
+      "d1_id": "name-texas"
+    },
+    {
+      "name": "Documented",
+      "type": "Organization",
+      "d1_id": "name-documented"
+    },
+    {
+      "name": "Biden campaign",
+      "type": "Organization",
+      "d1_id": "name-biden-campaign"
+    },
+    {
+      "name": "Compass Property Management",
+      "type": "Organization",
+      "d1_id": "name-compass-property-management"
+    },
+    {
+      "name": "Compass Professional",
+      "type": "Organization",
+      "d1_id": "name-compass-professional"
+    },
+    {
+      "name": "The New York Times",
+      "type": "Organization",
+      "d1_id": "name-the-new-york-times"
+    },
+    {
+      "name": "New York",
+      "type": "Organization",
+      "d1_id": "name-new-york"
+    },
+    {
+      "name": "New York Times",
+      "type": "Organization",
+      "d1_id": "name-new-york-times"
+    },
+    {
+      "name": "America PAC",
+      "type": "Organization",
+      "d1_id": "name-america-pac"
+    },
+    {
+      "name": "PAC",
+      "type": "Organization",
+      "d1_id": "name-pac"
+    },
+    {
+      "name": "Elon Musk",
+      "type": "Person",
+      "d1_id": "name-elon-musk"
+    },
+    {
+      "name": "Republican Party",
+      "type": "Organization",
+      "d1_id": "name-republican-party"
+    },
+    {
+      "name": "Bibb County",
+      "type": "Organization",
+      "d1_id": "name-bibb-county"
+    },
+    {
+      "name": "Mar-a-Lago",
+      "type": "Organization",
+      "d1_id": "name-mar-a-lago"
+    },
+    {
+      "name": "Seven Mountain Mandate",
+      "type": "Organization",
+      "d1_id": "name-seven-mountain-mandate"
+    },
+    {
+      "name": "Ziklag Group",
+      "type": "Organization",
+      "d1_id": "name-ziklag-group"
+    },
+    {
+      "name": "IRS",
+      "type": "Organization",
+      "d1_id": "name-irs"
+    },
+    {
+      "name": "Department of Homeland Security",
+      "type": "Organization",
+      "d1_id": "name-department-of-homeland-security"
+    },
+    {
+      "name": "DHS",
+      "type": "Organization",
+      "d1_id": "ein-203278600.0"
+    },
+    {
+      "name": "Kimberly O. Dennis",
+      "type": "Organization",
+      "d1_id": "name-kimberly-o-dennis"
+    },
+    {
+      "name": "Whitney Ball",
+      "type": "Person",
+      "d1_id": "name-whitney-ball"
+    },
+    {
+      "name": "revenue",
+      "type": "Person",
+      "d1_id": "name-revenue"
+    },
+    {
+      "name": "Richard Uihlein",
+      "type": "Person",
+      "d1_id": "name-richard-uihlein"
+    },
+    {
+      "name": "Uline",
+      "type": "Organization",
+      "d1_id": "name-uline"
+    },
+    {
+      "name": "Restoration PAC",
+      "type": "Organization",
+      "d1_id": "name-restoration-pac"
+    },
+    {
+      "name": "Marble Freedom Trust",
+      "type": "Organization",
+      "d1_id": "ein-850784793.0"
+    },
+    {
+      "name": "Barre Seid",
+      "type": "Organization",
+      "d1_id": "name-barre-seid"
+    },
+    {
+      "name": "Tripp Lite",
+      "type": "Organization",
+      "d1_id": "name-tripp-lite"
+    },
+    {
+      "name": "financial",
+      "type": "Organization",
+      "d1_id": "name-financial"
+    },
+    {
+      "name": "Kimberly Dennis",
+      "type": "Person",
+      "d1_id": "name-kimberly-dennis"
+    },
+    {
+      "name": "Searle Freedom Trust",
+      "type": "Organization",
+      "d1_id": "ein-367244615"
+    },
+    {
+      "name": "Ken Eldred",
+      "type": "Organization",
+      "d1_id": "name-ken-eldred"
+    },
+    {
+      "name": "Silicon Valley",
+      "type": "Organization",
+      "d1_id": "name-silicon-valley"
+    },
+    {
+      "name": "files",
+      "type": "Organization",
+      "d1_id": "name-files"
+    },
+    {
+      "name": "analytics",
+      "type": "Organization",
+      "d1_id": "name-analytics"
+    },
+    {
+      "name": "United In Purpose",
+      "type": "Organization",
+      "d1_id": "ein-262495973.0"
+    },
+    {
+      "name": "Christian nationalist",
+      "type": "Organization",
+      "d1_id": "name-christian-nationalist"
+    },
+    {
+      "name": "Lance Wallnau",
+      "type": "Person",
+      "d1_id": "name-lance-wallnau"
+    },
+    {
+      "name": "Johnson",
+      "type": "Person",
+      "d1_id": "name-johnson"
+    },
+    {
+      "name": "Executive Order 13798",
+      "type": "Organization",
+      "d1_id": "name-executive-order-13798"
+    },
+    {
+      "name": "Johnson Amendment",
+      "type": "Organization",
+      "d1_id": "name-johnson-amendment"
+    },
+    {
+      "name": "John",
+      "type": "Person",
+      "d1_id": "name-john"
+    },
+    {
+      "name": "Religion",
+      "type": "Organization",
+      "d1_id": "name-religion"
+    },
+    {
+      "name": "Religion Mountain",
+      "type": "Organization",
+      "d1_id": "name-religion-mountain"
+    },
+    {
+      "name": "Charlie Kirk",
+      "type": "Organization",
+      "d1_id": "name-charlie-kirk"
+    },
+    {
+      "name": "USA",
+      "type": "Organization",
+      "d1_id": "name-usa"
+    },
+    {
+      "name": "Turning Point USA",
+      "type": "Organization",
+      "d1_id": "ein-800835023"
+    },
+    {
+      "name": "Kirk",
+      "type": "Person",
+      "d1_id": "name-kirk"
+    },
+    {
+      "name": "free markets",
+      "type": "Organization",
+      "d1_id": "name-free-markets"
+    },
+    {
+      "name": "Turning Point Action",
+      "type": "Organization",
+      "d1_id": "ein-464331510"
+    },
+    {
+      "name": "Media",
+      "type": "Organization",
+      "d1_id": "name-media"
+    },
+    {
+      "name": "Big Lie",
+      "type": "Organization",
+      "d1_id": "name-big-lie"
+    },
+    {
+      "name": "Salem Media Group",
+      "type": "Organization",
+      "d1_id": "name-salem-media-group"
+    },
+    {
+      "name": "Dinesh D'Souza",
+      "type": "Person",
+      "d1_id": "name-dinesh-d-souza"
+    },
+    {
+      "name": "events",
+      "type": "Organization",
+      "d1_id": "name-events"
+    },
+    {
+      "name": "James Dobson",
+      "type": "Person",
+      "d1_id": "name-james-dobson"
+    },
+    {
+      "name": "Colorado",
+      "type": "Organization",
+      "d1_id": "name-colorado"
+    },
+    {
+      "name": "children",
+      "type": "Organization",
+      "d1_id": "name-children"
+    },
+    {
+      "name": "Focus on the Family",
+      "type": "Organization",
+      "d1_id": "ein-841522811"
+    }
+  ],
+  "globals": {
+    "prologue": [
+      {
+        "type": "p",
+        "children": [
+          {
+            "text": "> \"We don't want a seat at the table. We want to own the table.\" — Lance Wallnau\n\nThe events that follow are not random. They are the documented execution of a singular strategy: **The Seven Mountain Mandate**.\nPropelled by the shadowy billionaire coordinator **Ziklag**, this network systematically captured the pillars of American society.\nThey didn't just win elections; they bought the infrastructure.\n\nThis dossier organizes the evidence by \"Mountain\" — the specific sphere of influence targeted by each operation."
+          }
+        ]
+      }
+    ],
+    "epilogue": [
+      {
+        "type": "p",
+        "children": [
+          {
+            "text": "> \"Democracy doesn't die in darkness. It dies in banks.\"\n\nThe capture was successful. But what was the point?\nBeyond ideology, the architects of this machine reaped massive personal and systemic rewards.\n\n### The FEC Payoff\n*   **Sean Cooksey (The Enforcer):** Installed as FEC Chair to block enforcement. In 2025, he exited the \"neutral\" regulator role directly into **JD Vance's** staff.\n*   **Shana Broussard (The Swing Vote):** A Democrat who voted *with* Republicans to block dark money probes. Her reward? The Chairmanship itself in 2024, handed to her by the very Republicans she aided.\n*   **Allen Dickerson (The Revolving Door):** Moved from the *Institute for Free Speech* (defending dark money) to the FEC (regulating it), and then *back* to the Institute.\n\n### The Judicial Payoff\n**Leonard Leo** didn't just pick judges. He monetized the process.\nHis for-profit firm, **CRC Advisors**, collected over **$50 million** from the non-profits he controlled (The 85 Fund, Concord Fund).\nHe turned the Supreme Court nomination process into a personal revenue stream.\n\n### The Election Payoff\n**Gina Swoboda** went from running the dark-money funded **VoteRef** to a taxpayer-funded government position advising on election policy.\n**Heather Honey** moved from generating false election conspiracies to a DHS appointment.\n\nThe Machine didn't just win. It hired its own builders."
+          }
+        ]
+      }
+    ],
+    "version": "2.0 (Seven Mountains)"
+  }
+}
