@@ -5,7 +5,7 @@
     "": {
       "name": "researchcms",
       "dependencies": {
-        "@opennextjs/cloudflare": "^1.11.0",
+        "@opennextjs/cloudflare": "^1.14.6",
         "@payloadcms/db-d1-sqlite": "3.68.5",
         "@payloadcms/next": "3.68.5",
         "@payloadcms/plugin-mcp": "^3.68.5",

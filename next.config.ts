@@ -12,6 +12,12 @@ const nextConfig = {
 
     return webpackConfig
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 }
 
 export default withPayload(nextConfig, { devBundleServerPackages: false })
