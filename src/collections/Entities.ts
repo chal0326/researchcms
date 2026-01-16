@@ -48,9 +48,13 @@ export const Entities: CollectionConfig = {
       label: 'EIN',
       type: 'text',
       index: true,
+      validate: (val: string | null) => {
+        if (!val) return true
+        return /^\d{9}$/.test(val) || 'EIN must be exactly 9 digits (0-9).'
+      },
       admin: {
         description:
-          'Employer Identification Number (for Organizations). Used as a primary unique identifier.',
+          'Employer Identification Number (for Organizations). Must be exactly 9 digits.',
       },
     },
     {

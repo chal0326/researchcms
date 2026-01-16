@@ -263,71 +263,31 @@ export interface Mountain {
 export interface Entity {
   id: number;
   name: string;
-  type: 'Organization' | 'Person' | 'Fund' | 'Corporation' | 'Government';
+  type:
+    | 'Person'
+    | 'Organization'
+    | 'Event'
+    | 'Actor'
+    | 'Polity'
+    | 'Concept'
+    | 'Location'
+    | 'Impact'
+    | 'Topic'
+    | 'System'
+    | 'Other';
   /**
-   * CRITICAL: The Tax ID used to fetch 990 data from R2 Datamarts.
+   * Employer Identification Number (for Organizations). Used as a primary unique identifier.
    */
   ein?: string | null;
+  description?: string | null;
   aliases?:
     | {
-        alias?: string | null;
+        name?: string | null;
+        type?: ('AKA' | 'DBA' | 'FormerName' | 'Parent' | 'Subsidiary' | 'Conglomerate') | null;
         id?: string | null;
       }[]
     | null;
-  /**
-   * Configuration for fetching external datamart records.
-   */
-  deep_data_pointer?:
-    | {
-        [k: string]: unknown;
-      }
-    | unknown[]
-    | string
-    | number
-    | boolean
-    | null;
-  /**
-   * ID from the 990-ledger entities table.
-   */
-  ledger_source_id?: string | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "relationships".
- */
-export interface Relationship {
-  id: number;
-  /**
-   * The source entity (e.g. Payer, Employer)
-   */
-  from: number | Entity;
-  /**
-   * The target entity (e.g. Payee, Employee)
-   */
-  to: number | Entity;
-  type: 'Contract' | 'Grant' | 'Employment' | 'Board' | 'Officer' | 'KeyEmployee' | 'Other';
-  year?: number | null;
-  /**
-   * Monetary value of the relationship (Compensation, Contract Amount)
-   */
-  amount?: number | null;
-  /**
-   * Service description, role title, or context.
-   */
-  description?: string | null;
-  /**
-   * Specific title or role (e.g. "CEO", "Director")
-   */
-  role?: string | null;
-  /**
-   * ID from the source 990-ledger table (contracts.id or nonprofitpeople.id)
-   */
-  ledger_source_id?: string | null;
-  /**
-   * Additional raw data from the ledger.
-   */
+  source_file?: string | null;
   metadata?:
     | {
         [k: string]: unknown;
@@ -337,6 +297,40 @@ export interface Relationship {
     | number
     | boolean
     | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "relationships".
+ */
+export interface Relationship {
+  id: number;
+  from: number | Entity;
+  to: number | Entity;
+  type:
+    | 'TRIGGERED'
+    | 'PARTICIPATED_IN'
+    | 'AFFECTED'
+    | 'LOCATED_IN'
+    | 'PRECEDES'
+    | 'FOLLOWS'
+    | 'ASSOCIATED_WITH'
+    | 'MENTIONS';
+  description?: string | null;
+  /**
+   * Structured attributes like Role, Severity, Type, etc.
+   */
+  attributes?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  source_file?: string | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -601,14 +595,16 @@ export interface EntitiesSelect<T extends boolean = true> {
   name?: T;
   type?: T;
   ein?: T;
+  description?: T;
   aliases?:
     | T
     | {
-        alias?: T;
+        name?: T;
+        type?: T;
         id?: T;
       };
-  deep_data_pointer?: T;
-  ledger_source_id?: T;
+  source_file?: T;
+  metadata?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -620,12 +616,9 @@ export interface RelationshipsSelect<T extends boolean = true> {
   from?: T;
   to?: T;
   type?: T;
-  year?: T;
-  amount?: T;
   description?: T;
-  role?: T;
-  ledger_source_id?: T;
-  metadata?: T;
+  attributes?: T;
+  source_file?: T;
   updatedAt?: T;
   createdAt?: T;
 }
