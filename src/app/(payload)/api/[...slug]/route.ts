@@ -60,6 +60,35 @@ const wrapHandler = (handler: any) => async (req: any, args: any) => {
     try {
       const body = await req.json()
       const payload = await getPayload({ config })
+
+      if (body.method === 'initialize') {
+        return NextResponse.json({
+          jsonrpc: '2.0',
+          id: body.id,
+          result: {
+            protocolVersion: '2024-11-05',
+            capabilities: {
+              tools: {
+                listChanged: true,
+              },
+            },
+            serverInfo: {
+              name: 'ResearchCMS Manual MCP',
+              version: '1.0.0',
+            },
+          },
+        })
+      }
+
+      if (body.method === 'notifications/initialized') {
+        // Just acknowledge
+        return NextResponse.json({
+          jsonrpc: '2.0',
+          id: body.id,
+          result: {},
+        })
+      }
+
       if (body.method === 'tools/list') {
         console.log('[MCP] Handling tools/list')
         const collections = ['mountains', 'entities', 'timeline-events', 'users']

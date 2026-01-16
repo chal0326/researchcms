@@ -1,0 +1,11 @@
+cells:
+  - kind: 2
+    languageId: sql
+    value: ""
+    metadata: {}
+metadata:
+  conn:
+    id: cloudProvider-::-73L90ZgwStmcDKxKuqYV6-::-{"uuid":"f1fc7465-5891-45a4-9e52-c1943980218c","name":"990-ledger","accountId":"aeb2ac2e03c5aef0af66754ae45e4863"}
+    name: 990-ledger (CF)
+  database: main
+  schema: ""

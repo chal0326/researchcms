@@ -64,7 +64,6 @@ export type SupportedTimezones =
 export interface Config {
   auth: {
     users: UserAuthOperations;
-    'payload-mcp-api-keys': PayloadMcpApiKeyAuthOperations;
   };
   blocks: {};
   collections: {
@@ -72,8 +71,9 @@ export interface Config {
     media: Media;
     mountains: Mountain;
     entities: Entity;
+    relationships: Relationship;
     'timeline-events': TimelineEvent;
-    'payload-mcp-api-keys': PayloadMcpApiKey;
+    sources: Source;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -85,8 +85,9 @@ export interface Config {
     media: MediaSelect<false> | MediaSelect<true>;
     mountains: MountainsSelect<false> | MountainsSelect<true>;
     entities: EntitiesSelect<false> | EntitiesSelect<true>;
+    relationships: RelationshipsSelect<false> | RelationshipsSelect<true>;
     'timeline-events': TimelineEventsSelect<false> | TimelineEventsSelect<true>;
-    'payload-mcp-api-keys': PayloadMcpApiKeysSelect<false> | PayloadMcpApiKeysSelect<true>;
+    sources: SourcesSelect<false> | SourcesSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -103,13 +104,9 @@ export interface Config {
     'narrative-config': NarrativeConfigSelect<false> | NarrativeConfigSelect<true>;
   };
   locale: null;
-  user:
-    | (User & {
-        collection: 'users';
-      })
-    | (PayloadMcpApiKey & {
-        collection: 'payload-mcp-api-keys';
-      });
+  user: User & {
+    collection: 'users';
+  };
   jobs: {
     tasks: unknown;
     workflows: unknown;
@@ -133,30 +130,20 @@ export interface UserAuthOperations {
     password: string;
   };
 }
-export interface PayloadMcpApiKeyAuthOperations {
-  forgotPassword: {
-    email: string;
-    password: string;
-  };
-  login: {
-    email: string;
-    password: string;
-  };
-  registerFirstUser: {
-    email: string;
-    password: string;
-  };
-  unlock: {
-    email: string;
-    password: string;
-  };
-}
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "users".
  */
 export interface User {
   id: number;
+  /**
+   * Display name for this user
+   */
+  name?: string | null;
+  /**
+   * User roles for access control
+   */
+  roles: ('admin' | 'editor' | 'user')[];
   updatedAt: string;
   createdAt: string;
   email: string;
@@ -200,6 +187,46 @@ export interface Mountain {
   id: number;
   title: string;
   /**
+   * Order 1-7 for the reading journey.
+   */
+  order?: number | null;
+  /**
+   * Sets the scene for this specific perspective.
+   */
+  introduction?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  /**
+   * Wraps up this narrative thread.
+   */
+  conclusion?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  /**
    * URL-friendly identifier
    */
   slug: string;
@@ -222,6 +249,10 @@ export interface Mountain {
     };
     [k: string]: unknown;
   } | null;
+  /**
+   * Hex color code for this storyline (e.g. #FF0000)
+   */
+  color?: string | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -256,9 +287,56 @@ export interface Entity {
     | boolean
     | null;
   /**
-   * Legacy ID from the initial graph analysis.
+   * ID from the 990-ledger entities table.
    */
-  d1_id?: string | null;
+  ledger_source_id?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "relationships".
+ */
+export interface Relationship {
+  id: number;
+  /**
+   * The source entity (e.g. Payer, Employer)
+   */
+  from: number | Entity;
+  /**
+   * The target entity (e.g. Payee, Employee)
+   */
+  to: number | Entity;
+  type: 'Contract' | 'Grant' | 'Employment' | 'Board' | 'Officer' | 'KeyEmployee' | 'Other';
+  year?: number | null;
+  /**
+   * Monetary value of the relationship (Compensation, Contract Amount)
+   */
+  amount?: number | null;
+  /**
+   * Service description, role title, or context.
+   */
+  description?: string | null;
+  /**
+   * Specific title or role (e.g. "CEO", "Director")
+   */
+  role?: string | null;
+  /**
+   * ID from the source 990-ledger table (contracts.id or nonprofitpeople.id)
+   */
+  ledger_source_id?: string | null;
+  /**
+   * Additional raw data from the ledger.
+   */
+  metadata?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -271,9 +349,32 @@ export interface TimelineEvent {
    * Internal ID (e.g. "2024-ziklag-exposed")
    */
   id: string;
-  year: string;
+  /**
+   * YYYY (Mandatory)
+   */
+  year: number;
+  /**
+   * Month (Optional)
+   */
+  month?: ('1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12') | null;
+  /**
+   * Day (Optional)
+   */
+  day?: number | null;
   title: string;
-  mountain: number | Mountain;
+  /**
+   * Auto-calculated for sorting.
+   */
+  date?: string | null;
+  /**
+   * Order of events within the same day (1, 2, 3...).
+   */
+  sequence?: number | null;
+  mountains: (number | Mountain)[];
+  /**
+   * Check this if this event signifies a major crossover between storylines.
+   */
+  isConvergencePoint?: boolean | null;
   body: {
     root: {
       type: string;
@@ -290,9 +391,32 @@ export interface TimelineEvent {
     [k: string]: unknown;
   };
   /**
+   * Evidence backing this event.
+   */
+  sources?:
+    | {
+        source: number | Source;
+        /**
+         * Page number, timestamp, or paragraph (e.g., "Page 42, para 3").
+         */
+        reference_location: string;
+        quote?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  /**
    * Key players involved in this event.
    */
-  entities?: (number | Entity)[] | null;
+  entities?:
+    | {
+        entity: number | Entity;
+        /**
+         * E.g. "Payer of $5k", "Hired as CEO", "Victim". Optional nuance.
+         */
+        context?: string | null;
+        id?: string | null;
+      }[]
+    | null;
   /**
    * Raw markdown for provenance/verification.
    */
@@ -301,102 +425,23 @@ export interface TimelineEvent {
   createdAt: string;
 }
 /**
- * API keys control which collections, resources, tools, and prompts MCP clients can access
- *
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "payload-mcp-api-keys".
+ * via the `definition` "sources".
  */
-export interface PayloadMcpApiKey {
+export interface Source {
   id: number;
+  title: string;
+  type: 'Book' | 'Academic Paper' | 'URL' | 'Court Document' | 'Media File' | 'Interview' | 'Other';
+  author?: string | null;
+  publication_date?: string | null;
+  url?: string | null;
+  file?: (number | null) | Media;
   /**
-   * The user that the API key is associated with.
+   * Formatted citation string for display purposes.
    */
-  user: number | User;
-  /**
-   * A useful label for the API key.
-   */
-  label?: string | null;
-  /**
-   * The purpose of the API key.
-   */
-  description?: string | null;
-  mountains?: {
-    /**
-     * Allow clients to find mountains.
-     */
-    find?: boolean | null;
-    /**
-     * Allow clients to create mountains.
-     */
-    create?: boolean | null;
-    /**
-     * Allow clients to update mountains.
-     */
-    update?: boolean | null;
-    /**
-     * Allow clients to delete mountains.
-     */
-    delete?: boolean | null;
-  };
-  entities?: {
-    /**
-     * Allow clients to find entities.
-     */
-    find?: boolean | null;
-    /**
-     * Allow clients to create entities.
-     */
-    create?: boolean | null;
-    /**
-     * Allow clients to update entities.
-     */
-    update?: boolean | null;
-    /**
-     * Allow clients to delete entities.
-     */
-    delete?: boolean | null;
-  };
-  timelineEvents?: {
-    /**
-     * Allow clients to find timeline-events.
-     */
-    find?: boolean | null;
-    /**
-     * Allow clients to create timeline-events.
-     */
-    create?: boolean | null;
-    /**
-     * Allow clients to update timeline-events.
-     */
-    update?: boolean | null;
-    /**
-     * Allow clients to delete timeline-events.
-     */
-    delete?: boolean | null;
-  };
-  users?: {
-    /**
-     * Allow clients to find users.
-     */
-    find?: boolean | null;
-    /**
-     * Allow clients to create users.
-     */
-    create?: boolean | null;
-    /**
-     * Allow clients to update users.
-     */
-    update?: boolean | null;
-    /**
-     * Allow clients to delete users.
-     */
-    delete?: boolean | null;
-  };
+  citation_text?: string | null;
   updatedAt: string;
   createdAt: string;
-  enableAPIKey?: boolean | null;
-  apiKey?: string | null;
-  apiKeyIndex?: string | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -439,23 +484,22 @@ export interface PayloadLockedDocument {
         value: number | Entity;
       } | null)
     | ({
+        relationTo: 'relationships';
+        value: number | Relationship;
+      } | null)
+    | ({
         relationTo: 'timeline-events';
         value: string | TimelineEvent;
       } | null)
     | ({
-        relationTo: 'payload-mcp-api-keys';
-        value: number | PayloadMcpApiKey;
+        relationTo: 'sources';
+        value: number | Source;
       } | null);
   globalSlug?: string | null;
-  user:
-    | {
-        relationTo: 'users';
-        value: number | User;
-      }
-    | {
-        relationTo: 'payload-mcp-api-keys';
-        value: number | PayloadMcpApiKey;
-      };
+  user: {
+    relationTo: 'users';
+    value: number | User;
+  };
   updatedAt: string;
   createdAt: string;
 }
@@ -465,15 +509,10 @@ export interface PayloadLockedDocument {
  */
 export interface PayloadPreference {
   id: number;
-  user:
-    | {
-        relationTo: 'users';
-        value: number | User;
-      }
-    | {
-        relationTo: 'payload-mcp-api-keys';
-        value: number | PayloadMcpApiKey;
-      };
+  user: {
+    relationTo: 'users';
+    value: number | User;
+  };
   key?: string | null;
   value?:
     | {
@@ -503,6 +542,8 @@ export interface PayloadMigration {
  * via the `definition` "users_select".
  */
 export interface UsersSelect<T extends boolean = true> {
+  name?: T;
+  roles?: T;
   updatedAt?: T;
   createdAt?: T;
   email?: T;
@@ -542,9 +583,13 @@ export interface MediaSelect<T extends boolean = true> {
  */
 export interface MountainsSelect<T extends boolean = true> {
   title?: T;
+  order?: T;
+  introduction?: T;
+  conclusion?: T;
   slug?: T;
   icon?: T;
   summary?: T;
+  color?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -563,7 +608,24 @@ export interface EntitiesSelect<T extends boolean = true> {
         id?: T;
       };
   deep_data_pointer?: T;
-  d1_id?: T;
+  ledger_source_id?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "relationships_select".
+ */
+export interface RelationshipsSelect<T extends boolean = true> {
+  from?: T;
+  to?: T;
+  type?: T;
+  year?: T;
+  amount?: T;
+  description?: T;
+  role?: T;
+  ledger_source_id?: T;
+  metadata?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -574,59 +636,47 @@ export interface EntitiesSelect<T extends boolean = true> {
 export interface TimelineEventsSelect<T extends boolean = true> {
   id?: T;
   year?: T;
+  month?: T;
+  day?: T;
   title?: T;
-  mountain?: T;
+  date?: T;
+  sequence?: T;
+  mountains?: T;
+  isConvergencePoint?: T;
   body?: T;
-  entities?: T;
+  sources?:
+    | T
+    | {
+        source?: T;
+        reference_location?: T;
+        quote?: T;
+        id?: T;
+      };
+  entities?:
+    | T
+    | {
+        entity?: T;
+        context?: T;
+        id?: T;
+      };
   original_text?: T;
   updatedAt?: T;
   createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "payload-mcp-api-keys_select".
+ * via the `definition` "sources_select".
  */
-export interface PayloadMcpApiKeysSelect<T extends boolean = true> {
-  user?: T;
-  label?: T;
-  description?: T;
-  mountains?:
-    | T
-    | {
-        find?: T;
-        create?: T;
-        update?: T;
-        delete?: T;
-      };
-  entities?:
-    | T
-    | {
-        find?: T;
-        create?: T;
-        update?: T;
-        delete?: T;
-      };
-  timelineEvents?:
-    | T
-    | {
-        find?: T;
-        create?: T;
-        update?: T;
-        delete?: T;
-      };
-  users?:
-    | T
-    | {
-        find?: T;
-        create?: T;
-        update?: T;
-        delete?: T;
-      };
+export interface SourcesSelect<T extends boolean = true> {
+  title?: T;
+  type?: T;
+  author?: T;
+  publication_date?: T;
+  url?: T;
+  file?: T;
+  citation_text?: T;
   updatedAt?: T;
   createdAt?: T;
-  enableAPIKey?: T;
-  apiKey?: T;
-  apiKeyIndex?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

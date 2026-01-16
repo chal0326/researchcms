@@ -1,6 +1,8 @@
 import * as migration_20250929_111647 from './20250929_111647';
 import * as migration_20251216_235015_add_research_schema from './20251216_235015_add_research_schema';
 import * as migration_20251218_004828_fix_schema_drift from './20251218_004828_fix_schema_drift';
+import * as migration_20251221_094209_users_add_roles_and_name from './20251221_094209_users_add_roles_and_name';
+import * as migration_20251221_131338_date_field_optional from './20251221_131338_date_field_optional';
 
 export const migrations = [
   {
@@ -16,6 +18,16 @@ export const migrations = [
   {
     up: migration_20251218_004828_fix_schema_drift.up,
     down: migration_20251218_004828_fix_schema_drift.down,
-    name: '20251218_004828_fix_schema_drift'
+    name: '20251218_004828_fix_schema_drift',
+  },
+  {
+    up: migration_20251221_094209_users_add_roles_and_name.up,
+    down: migration_20251221_094209_users_add_roles_and_name.down,
+    name: '20251221_094209_users_add_roles_and_name',
+  },
+  {
+    up: migration_20251221_131338_date_field_optional.up,
+    down: migration_20251221_131338_date_field_optional.down,
+    name: '20251221_131338_date_field_optional'
   },
 ];

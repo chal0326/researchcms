@@ -12,17 +12,21 @@ import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 import { Mountains } from './collections/Mountains'
 import { Entities } from './collections/Entities'
+import { Relationships } from './collections/Relationships'
 import { TimelineEvents } from './collections/TimelineEvents'
+import { Sources } from './collections/Sources'
 import { NarrativeConfig } from './globals/NarrativeConfig'
 
-const filename = fileURLToPath(import.meta.url)
-const dirname = path.dirname(filename)
+const filename =
+  import.meta.url && import.meta.url.startsWith('file:') ? fileURLToPath(import.meta.url) : ''
+const dirname = filename ? path.dirname(filename) : ''
 
 const isCLI = process.argv.some((value) => value.match(/^(generate|migrate):?/))
 const isProduction = process.env.NODE_ENV === 'production'
 
-const cloudflare =
-  isCLI || !isProduction
+const cloudflare = (globalThis as any).__CLOUDFLARE_ENV__
+  ? { env: (globalThis as any).__CLOUDFLARE_ENV__ }
+  : isCLI || !isProduction
     ? await getCloudflareContextFromWrangler()
     : await getCloudflareContext({ async: true })
 
@@ -32,8 +36,21 @@ export default buildConfig({
     importMap: {
       baseDir: path.resolve(dirname),
     },
+    components: {
+      // Define a custom view
+      views: {
+        SourceImporter: {
+          Component: '/components/SourceImporter/index.tsx',
+          path: '/ingest-sources',
+        },
+        StoryBuilder: {
+          Component: '/components/StoryBuilder/index.tsx',
+          path: '/story-builder',
+        },
+      },
+    },
   },
-  collections: [Users, Media, Mountains, Entities, TimelineEvents],
+  collections: [Users, Media, Mountains, Entities, Relationships, TimelineEvents, Sources],
   globals: [NarrativeConfig],
   editor: lexicalEditor(),
   secret:
@@ -52,27 +69,6 @@ export default buildConfig({
     r2Storage({
       bucket: cloudflare.env.R2,
       collections: { media: true },
-    }),
-    mcpPlugin({
-      collections: {
-        mountains: {
-          enabled: true,
-          description:
-            'A collection of mountains representing different areas of research/narrative.',
-        },
-        entities: {
-          enabled: true,
-          description: 'Entities (organizations or individuals) involved in the research.',
-        },
-        'timeline-events': {
-          enabled: true,
-          description: 'Specific events linked to researchers or mountains.',
-        },
-        users: {
-          enabled: true,
-          description: 'CMS users.',
-        },
-      },
     }),
   ],
 })

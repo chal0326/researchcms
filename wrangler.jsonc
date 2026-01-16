@@ -61,39 +61,69 @@
     // {
     //   "binding": "NEXT_INC_CACHE_R2_BUCKET",
     //   "bucket_name": "<BUCKET_NAME>",
-    // },
   ],
+  "queues": {
+    "producers": [
+      {
+        "binding": "EXTRACTION_QUEUE",
+        "queue": "researchcms-extraction",
+      },
+    ],
+  },
+  "ai": {
+    "binding": "AI",
+  },
   // Here's how to configure an additional environment
   // It can be deployed with `CLOUDFLARE_ENV=staging pnpm run deploy`
-  // "env": {
-  //   "staging": {
-  //     "name": "my-app-staging",
-  //     "d1_databases": [
-  //       {
-  //         "binding": "D1",
-  //         "database_id": "DATABASE_ID",
-  //         "database_name": "my-app-staging",
-  //         "remote": true
-  //       }
-  //     ],
-  //     "services": [
-  //       // The service should match the "name" of your worker
-  //       // {
-  //       //   "binding": "WORKER_SELF_REFERENCE",
-  //       //   "service": "my-app-staging"
-  //       // },
-  //     ],
-  //     "r2_buckets": [
-  //       {
-  //         "binding": "R2",
-  //         "bucket_name": "my-app-staging"
-  //       }
-  //       // Create a R2 binding with the binding name "NEXT_INC_CACHE_R2_BUCKET"
-  //       // {
-  //       //   "binding": "NEXT_INC_CACHE_R2_BUCKET",
-  //       //   "bucket_name": "<BUCKET_NAME>",
-  //       // },
-  //     ]
-  //   }
-  // }
+  "env": {
+    "inquisitor": {
+      "name": "researchcms-inquisitor",
+      "main": "src/worker/inquisitor.ts",
+      "d1_databases": [
+        {
+          "binding": "D1",
+          "database_id": "f3fe7f4b-4dd2-47fc-b178-4b3f424a3bf3",
+          "database_name": "researchcms",
+        },
+      ],
+      "r2_buckets": [
+        {
+          "binding": "RESEARCH_DOCS",
+          "bucket_name": "research-documents",
+        },
+        {
+          "binding": "R2",
+          "bucket_name": "researchcms",
+        },
+      ],
+      "vars": {
+        "PAYLOAD_SECRET": "34356392b8afddcaf11190c1d86b983cd0889f9dd1418eaec02c35103bca4dd8",
+        "NODE_ENV": "production",
+      },
+      "ai": {
+        "binding": "AI",
+      },
+      "queues": {
+        "consumers": [
+          {
+            "queue": "researchcms-extraction",
+            "max_batch_size": 1,
+            "max_concurrency": 10,
+          },
+        ],
+      },
+      "workflows": [
+        {
+          "binding": "EXTRACTION_WORKFLOW",
+          "name": "researchcms-extraction-workflow",
+          "class_name": "ExtractionWorkflow",
+        },
+      ],
+      "triggers": {
+        "crons": ["0 * * * *"],
+      },
+      "minify": false,
+      "no_bundle": false,
+    },
+  },
 }

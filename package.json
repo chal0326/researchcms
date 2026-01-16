@@ -6,9 +6,11 @@
   "type": "module",
   "scripts": {
     "build": "cross-env NODE_OPTIONS=\"--no-deprecation --max-old-space-size=8000\" next build",
-    "deploy": "bun run deploy:database && bun run deploy:app",
+    "deploy": "bun run deploy:database && bun run deploy:app && bun run deploy:inquisitor",
     "deploy:app": "opennextjs-cloudflare build --env=$CLOUDFLARE_ENV && opennextjs-cloudflare deploy --env=$CLOUDFLARE_ENV",
     "deploy:database": "cross-env NODE_ENV=production PAYLOAD_SECRET=ignore payload migrate && wrangler d1 execute D1 --command 'PRAGMA optimize' --env=$CLOUDFLARE_ENV --remote",
+    "deploy:inquisitor": "wrangler deploy --env inquisitor src/worker/inquisitor.ts",
+    "provision:automation": "wrangler r2 notification create research-documents --queue researchcms-extraction --event-type object-create",
     "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
     "generate:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
     "generate:types": "bun run generate:types:cloudflare && bun run generate:types:payload",
@@ -23,7 +25,9 @@
     "test:int": "cross-env NODE_OPTIONS=--no-deprecation vitest run --config ./vitest.config.mts"
   },
   "dependencies": {
-    "@opennextjs/cloudflare": "^1.14.6",
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/sortable": "^9.0.0",
+    "@opennextjs/cloudflare": "^1.14.7",
     "@payloadcms/db-d1-sqlite": "3.68.5",
     "@payloadcms/next": "3.68.5",
     "@payloadcms/plugin-mcp": "^3.68.5",
@@ -31,12 +35,15 @@
     "@payloadcms/storage-r2": "3.68.5",
     "@payloadcms/ui": "3.68.5",
     "cross-env": "^7.0.3",
+    "date-fns": "^4.1.0",
     "dotenv": "16.4.7",
     "graphql": "^16.8.1",
+    "lucide-react": "^0.469.0",
     "next": "15.4.10",
     "payload": "3.68.5",
     "react": "19.2.1",
-    "react-dom": "19.2.1"
+    "react-dom": "19.2.1",
+    "reactflow": "^11.11.4"
   },
   "devDependencies": {
     "@playwright/test": "1.56.1",

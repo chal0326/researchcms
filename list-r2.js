@@ -1,0 +1,1 @@
+export default { async fetch(req, env) { const list = await env.BUCKET.list({limit: 50}); return new Response(JSON.stringify(list.objects.map(o => o.key))); } }

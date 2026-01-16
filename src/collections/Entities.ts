@@ -1,4 +1,5 @@
 import type { CollectionConfig } from 'payload'
+import { authenticated, adminOnly } from '../access/access'
 
 export const Entities: CollectionConfig = {
   slug: 'entities',
@@ -8,10 +9,13 @@ export const Entities: CollectionConfig = {
   },
   admin: {
     useAsTitle: 'name',
-    defaultColumns: ['name', 'type', 'ein', 'd1_id'],
+    defaultColumns: ['name', 'type', 'ein', 'source_file'],
   },
   access: {
     read: () => true,
+    create: authenticated,
+    update: authenticated,
+    delete: adminOnly,
   },
   fields: [
     {
@@ -24,13 +28,20 @@ export const Entities: CollectionConfig = {
       name: 'type',
       type: 'select',
       options: [
-        { label: 'Organization (Non-Profit/Pol)', value: 'Organization' },
         { label: 'Person', value: 'Person' },
-        { label: 'Fund/Trust', value: 'Fund' },
-        { label: 'Corporation', value: 'Corporation' },
-        { label: 'Government Body', value: 'Government' },
+        { label: 'Organization', value: 'Organization' },
+        { label: 'Event', value: 'Event' },
+        { label: 'Actor', value: 'Actor' },
+        { label: 'Polity', value: 'Polity' },
+        { label: 'Concept/Ideology', value: 'Concept' },
+        { label: 'Location', value: 'Location' },
+        { label: 'Impact/Outcome', value: 'Impact' },
+        { label: 'Topic', value: 'Topic' },
+        { label: 'System', value: 'System' },
+        { label: 'Other', value: 'Other' },
       ],
       required: true,
+      index: true,
     },
     {
       name: 'ein',
@@ -38,39 +49,45 @@ export const Entities: CollectionConfig = {
       type: 'text',
       index: true,
       admin: {
-        description: 'CRITICAL: The Tax ID used to fetch 990 data from R2 Datamarts.',
+        description:
+          'Employer Identification Number (for Organizations). Used as a primary unique identifier.',
       },
     },
     {
+      name: 'description',
+      type: 'textarea',
+    },
+    {
       name: 'aliases',
+      label: 'Known Aliases (DBA, AKA, Former Names)',
       type: 'array',
       fields: [
         {
-          name: 'alias',
+          name: 'name',
           type: 'text',
+        },
+        {
+          name: 'type',
+          type: 'select',
+          options: [
+            { label: 'AKA (Also Known As)', value: 'AKA' },
+            { label: 'DBA (Doing Business As)', value: 'DBA' },
+            { label: 'Former Name', value: 'FormerName' },
+            { label: 'Umbrella / Parent Org', value: 'Parent' },
+            { label: 'Subsidiary', value: 'Subsidiary' },
+            { label: 'Conglomerate', value: 'Conglomerate' },
+          ],
         },
       ],
     },
     {
-      name: 'deep_data_pointer',
-      label: 'Deep Data Config',
-      type: 'json',
-      defaultValue: {
-        source: 'r2-iceberg',
-        bucket: 'giving-tuesday-datamarts',
-        path_pattern: '990/{{ein}}/*.parquet',
-      },
-      admin: {
-        description: 'Configuration for fetching external datamart records.',
-      },
+      name: 'source_file',
+      type: 'text',
+      index: true,
     },
     {
-      name: 'd1_id',
-      label: 'D1 Graph ID',
-      type: 'text',
-      admin: {
-        description: 'Legacy ID from the initial graph analysis.',
-      },
+      name: 'metadata',
+      type: 'json',
     },
   ],
 }
