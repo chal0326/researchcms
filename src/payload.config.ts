@@ -16,6 +16,7 @@ import { Relationships } from './collections/Relationships'
 import { TimelineEvents } from './collections/TimelineEvents'
 import { Sources } from './collections/Sources'
 import { NarrativeConfig } from './globals/NarrativeConfig'
+import { mergeEntities } from './endpoints/merge-entities'
 
 const filename =
   import.meta.url && import.meta.url.startsWith('file:') ? fileURLToPath(import.meta.url) : ''
@@ -51,6 +52,7 @@ export default buildConfig({
     },
   },
   collections: [Users, Media, Mountains, Entities, Relationships, TimelineEvents, Sources],
+  endpoints: [mergeEntities],
   globals: [NarrativeConfig],
   editor: lexicalEditor(),
   secret:
