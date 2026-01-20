@@ -5,7 +5,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "cross-env NODE_OPTIONS=\"--no-deprecation --max-old-space-size=8000\" next build",
+    "build": "cross-env PAYLOAD_SECRET=dummy-secret NODE_OPTIONS=\"--no-deprecation --max-old-space-size=8000\" next build",
     "deploy": "bun run deploy:database && bun run deploy:app && bun run deploy:inquisitor",
     "deploy:app": "opennextjs-cloudflare build --env=$CLOUDFLARE_ENV && opennextjs-cloudflare deploy --env=$CLOUDFLARE_ENV",
     "deploy:database": "cross-env NODE_ENV=production PAYLOAD_SECRET=ignore payload migrate && wrangler d1 execute D1 --command 'PRAGMA optimize' --env=$CLOUDFLARE_ENV --remote",
@@ -75,6 +75,9 @@
     "overrides": {
       "file-type": "18.7.0"
     }
+  },
+  "resolutions": {
+    "file-type": "18.7.0"
   },
   "cloudflare": {
     "bindings": {
