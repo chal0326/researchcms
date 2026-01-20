@@ -1,9 +1,10 @@
 import { WorkflowEntrypoint, WorkflowStep, WorkflowEvent } from 'cloudflare:workers'
 import { GraphExtractor } from '../lib/extractor'
+import { Ai } from '@cloudflare/workers-types'
 
 type Env = {
   RESEARCH_DOCS: R2Bucket
-  AI: Ai
+  AI: any
   D1: D1Database
   EXTRACTION_WORKFLOW: Workflow
 }
@@ -336,4 +337,10 @@ const worker = {
   },
 }
 
-export default worker
+const InquisitorWorker = {
+  fetch: worker.fetch,
+  scheduled: worker.scheduled,
+  queue: worker.queue,
+}
+
+export default InquisitorWorker
