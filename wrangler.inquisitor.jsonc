@@ -4,6 +4,9 @@
   "main": "src/worker/inquisitor.ts",
   "compatibility_date": "2025-08-15",
   "compatibility_flags": ["nodejs_compat"],
+  "alias": {
+    "file-type": "./src/worker/shims/file-type.js",
+  },
   "observability": { "enabled": true },
   "vars": {
     "NODE_ENV": "production",
