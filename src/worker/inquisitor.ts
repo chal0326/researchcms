@@ -1,10 +1,9 @@
 import { WorkflowEntrypoint, WorkflowStep, WorkflowEvent } from 'cloudflare:workers'
 import { GraphExtractor } from '../lib/extractor'
-import { aI } from 'vitest/dist/chunks/reporters.d.DL9pg5DB.js'
 
 type Env = {
   RESEARCH_DOCS: R2Bucket
-  AI: aI
+  AI: Ai
   D1: D1Database
   EXTRACTION_WORKFLOW: Workflow
 }
@@ -170,20 +169,11 @@ export class ExtractionWorkflow extends WorkflowEntrypoint<Env, { key: string; b
   async run(event: WorkflowEvent<{ key: string; bucket: string }>, step: WorkflowStep) {
     const { key, bucket } = event.payload
 
-    const result = await step.do(
-      'extract-graph',
-      {
-        retries: {
-          limit: 3,
-          delay: '10 seconds',
-          backoff: 'exponential',
-        },
-      },
-      async () => {
-        const extractor = new GraphExtractor(this.env)
-        return await extractor.processFile(bucket, key)
-      },
-    )
+    const result = await step.do('extract-graph', async () => {
+      // ✅ INITIALIZE HERE: Do not initialize at the top of the file
+      const extractor = new GraphExtractor(this.env)
+      return await extractor.processFile(bucket, key)
+    })
 
     if (!result.success) {
       throw new Error(`Extraction failed for ${key}: ${result.error}`)

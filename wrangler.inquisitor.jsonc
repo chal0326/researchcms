@@ -10,6 +10,7 @@
   "observability": { "enabled": true },
   "vars": {
     "NODE_ENV": "production",
+    "PAYLOAD_CONFIG_PATH": "src/payload.config.ts",
   },
   "d1_databases": [
     {
