@@ -276,7 +276,7 @@ export interface Entity {
     | 'System'
     | 'Other';
   /**
-   * Employer Identification Number (for Organizations). Used as a primary unique identifier.
+   * Employer Identification Number (for Organizations). Must be exactly 9 digits.
    */
   ein?: string | null;
   description?: string | null;

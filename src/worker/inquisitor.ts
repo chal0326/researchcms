@@ -1,9 +1,10 @@
 import { WorkflowEntrypoint, WorkflowStep, WorkflowEvent } from 'cloudflare:workers'
 import { GraphExtractor } from '../lib/extractor'
+import { aI } from 'vitest/dist/chunks/reporters.d.DL9pg5DB.js'
 
 type Env = {
   RESEARCH_DOCS: R2Bucket
-  AI: unknown // Cloudflare AI binding
+  AI: aI
   D1: D1Database
   EXTRACTION_WORKFLOW: Workflow
 }
