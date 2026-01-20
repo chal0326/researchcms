@@ -6,7 +6,6 @@
   "compatibility_flags": ["nodejs_compat"],
   "observability": { "enabled": true },
   "vars": {
-    "PAYLOAD_SECRET": "34356392b8afddcaf11190c1d86b983cd0889f9dd1418eaec02c35103bca4dd8",
     "NODE_ENV": "production",
   },
   "d1_databases": [
