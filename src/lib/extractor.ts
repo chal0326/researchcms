@@ -1,5 +1,3 @@
-import { Payload, getPayload } from 'payload'
-
 export interface ExtractionStats {
   files: number
   chunks: number
@@ -39,17 +37,10 @@ const VALID_REL_TYPES = [
 ]
 
 export class GraphExtractor {
-  private payload?: Payload
+  private db: D1Database
 
-  constructor(private env: any) {}
-
-  private async getPayloadInstance() {
-    if (!this.payload) {
-      ;(globalThis as any).__CLOUDFLARE_ENV__ = this.env
-      const { default: config } = await import('../payload.config')
-      this.payload = await getPayload({ config })
-    }
-    return this.payload
+  constructor(env: any) {
+    this.db = env.D1
   }
 
   async processFile(bucketName: string, key: string): Promise<ExtractionResult> {
@@ -62,7 +53,6 @@ export class GraphExtractor {
 
       const text = await item.text()
       const ai = this.env.AI as any
-      const payload = await this.getPayloadInstance()
 
       // Chunking logic - split by headers but keep chunks manageable
       const chunks = text
@@ -146,20 +136,28 @@ export class GraphExtractor {
       }
 
       // 1. Fetch Existing Entities to avoid duplicates
-      const existingDocs = await payload.find({
-        collection: 'entities',
-        where: {
-          or: [{ name: { in: allNamesArr } }, { ein: { in: allEinsArr } }],
-        },
-        limit: 1000,
-      })
+      const placeholders = allNamesArr
+        .map(() => '?')
+        .concat(allEinsArr.map(() => '?'))
+        .join(',')
+      const params = [...allNamesArr, ...allEinsArr]
+      const existingEntities = await this.db
+        .prepare(
+          `SELECT id, name, ein FROM entities WHERE name IN (${allNamesArr.map(() => '?').join(',')}) OR ein IN (${allEinsArr.map(() => '?').join(',')})`,
+        )
+        .bind(...allNamesArr, ...allEinsArr)
+        .all()
 
-      const entityMap = new Map<string, string>()
-      const einMap = new Map<string, string>()
+      const entityMap = new Map<string, number>()
+      const einMap = new Map<string, number>()
 
-      for (const doc of existingDocs.docs) {
-        entityMap.set(doc.name, doc.id)
-        if (doc.ein) einMap.set(doc.ein, doc.id)
+      for (const entity of existingEntities.results as Array<{
+        id: number
+        name: string
+        ein?: string
+      }>) {
+        entityMap.set(entity.name, entity.id)
+        if (entity.ein) einMap.set(entity.ein, entity.id)
       }
 
       let entitiesCreatedCount = 0
@@ -173,28 +171,29 @@ export class GraphExtractor {
             entityMap.set(name, existingId)
             // Update EIN if missing
             if (ent.ein && !einMap.has(ent.ein)) {
-              await payload.update({
-                collection: 'entities',
-                id: existingId,
-                data: { ein: ent.ein },
-              })
+              await this.db
+                .prepare('UPDATE entities SET ein = ? WHERE id = ?')
+                .bind(ent.ein, existingId)
+                .run()
               einMap.set(ent.ein, existingId)
             }
           } else {
             console.log(`Creating entity: ${name}`)
-            const created = await payload.create({
-              collection: 'entities',
-              data: {
+            const result = await this.db
+              .prepare(
+                'INSERT INTO entities (name, type, ein, description, source_file) VALUES (?, ?, ?, ?, ?)',
+              )
+              .bind(
                 name,
-                type: VALID_ENTITY_TYPES.includes(ent.type) ? ent.type : 'Other',
-                ein: ent.ein,
-                description: ent.description,
-                aliases: (ent.aliases || []).map((a: any) => ({ name: a.name, type: a.type })),
-                source_file: key,
-              },
-            })
-            entityMap.set(name, created.id)
-            if (ent.ein) einMap.set(ent.ein, created.id)
+                VALID_ENTITY_TYPES.includes(ent.type) ? ent.type : 'Other',
+                ent.ein || null,
+                ent.description || null,
+                key,
+              )
+              .run()
+            const newId = result.meta.last_row_id
+            entityMap.set(name, newId)
+            if (ent.ein) einMap.set(ent.ein, newId)
             entitiesCreatedCount++
           }
         } catch (e) {
@@ -209,30 +208,21 @@ export class GraphExtractor {
           const toId = entityMap.get(rel.to)
           if (fromId && toId) {
             const relType = VALID_REL_TYPES.includes(rel.type) ? rel.type : 'ASSOCIATED_WITH'
-            const existingRel = await payload.find({
-              collection: 'relationships',
-              where: {
-                and: [
-                  { from: { equals: fromId } },
-                  { to: { equals: toId } },
-                  { type: { equals: relType } },
-                ],
-              },
-              limit: 1,
-            })
+            const existingRel = await this.db
+              .prepare(
+                'SELECT id FROM relationships WHERE "from" = ? AND "to" = ? AND type = ? LIMIT 1',
+              )
+              .bind(fromId, toId, relType)
+              .all()
 
-            if (existingRel.docs.length === 0) {
+            if (existingRel.results.length === 0) {
               console.log(`Creating relationship: ${rel.from} -> ${rel.to} (${relType})`)
-              await payload.create({
-                collection: 'relationships',
-                data: {
-                  from: fromId,
-                  to: toId,
-                  type: relType,
-                  description: rel.description,
-                  source_file: key,
-                },
-              })
+              await this.db
+                .prepare(
+                  'INSERT INTO relationships ("from", "to", type, description, source_file) VALUES (?, ?, ?, ?, ?)',
+                )
+                .bind(fromId, toId, relType, rel.description || null, key)
+                .run()
               relsCreatedCount++
             }
           }
@@ -242,62 +232,56 @@ export class GraphExtractor {
       }
 
       // 4. Sync TimelineEvents
-      const mountains = await payload.find({ collection: 'mountains', limit: 100 })
-      const mtnMap = new Map(mountains.docs.map((m) => [m.title.toLowerCase(), m.id]))
+      const mountains = await this.db.prepare('SELECT id, title FROM mountains').all()
+      const mtnMap = new Map(
+        (mountains.results as Array<{ id: number; title: string }>).map((m) => [
+          m.title.toLowerCase(),
+          m.id,
+        ]),
+      )
 
       for (const evt of fileEvents) {
         try {
           if (!evt.year || !evt.title) continue
 
-          const involvedEntities = (evt.participants || [])
-            .map((p: string) => ({
-              entity: entityMap.get(p.trim()),
-              context: `Mentioned in event: ${evt.title}`,
-            }))
-            .filter((p: any) => p.entity)
-
-          const mountainIds = (evt.mountains || [])
-            .map((m: string) => mtnMap.get(m.toLowerCase()))
-            .filter(Boolean)
-
           // Try to find if this event might already exist (same year, same title)
-          const existingEvt = await payload.find({
-            collection: 'timeline-events',
-            where: {
-              and: [{ year: { equals: parseInt(evt.year) } }, { title: { equals: evt.title } }],
-            },
-            limit: 1,
-          })
+          const existingEvt = await this.db
+            .prepare('SELECT id FROM timeline_events WHERE year = ? AND title = ? LIMIT 1')
+            .bind(parseInt(evt.year), evt.title)
+            .all()
 
-          if (existingEvt.docs.length === 0) {
+          if (existingEvt.results.length === 0) {
             console.log(`Creating Timeline Event: ${evt.title} (${evt.year})`)
-            await payload.create({
-              collection: 'timeline-events',
-              data: {
-                year: parseInt(evt.year),
-                month: evt.month?.toString(),
-                day: evt.day ? parseInt(evt.day) : undefined,
-                title: evt.title,
-                body: {
-                  root: {
-                    type: 'root',
-                    children: [
-                      {
-                        type: 'paragraph',
-                        children: [{ type: 'text', text: evt.description || evt.body || '' }],
-                      },
-                    ],
-                    direction: 'ltr',
-                    format: '',
-                    indent: 0,
-                    version: 1,
+            const bodyJson = JSON.stringify({
+              root: {
+                type: 'root',
+                children: [
+                  {
+                    type: 'paragraph',
+                    children: [{ type: 'text', text: evt.description || evt.body || '' }],
                   },
-                },
-                mountains: mountainIds.length > 0 ? mountainIds : [mtnMap.get('religion')!], // Default to Religion if unknown
-                entities: involvedEntities,
-                original_text: JSON.stringify(evt),
+                ],
+                direction: 'ltr',
+                format: '',
+                indent: 0,
+                version: 1,
               },
             })
+            const mountainId = mtnMap.get('religion') || 1 // Default to first mountain or 1
+            await this.db
+              .prepare(
+                'INSERT INTO timeline_events (id, year, month, day, title, body, original_text) VALUES (?, ?, ?, ?, ?, ?, ?)',
+              )
+              .bind(
+                `${evt.year}-${evt.title.replace(/[^a-zA-Z0-9]/g, '-')}`,
+                parseInt(evt.year),
+                evt.month?.toString() || null,
+                evt.day ? parseInt(evt.day) : null,
+                evt.title,
+                bodyJson,
+                JSON.stringify(evt),
+              )
+              .run()
           }
         } catch (e) {
           console.error('Error syncing timeline event:', e)
