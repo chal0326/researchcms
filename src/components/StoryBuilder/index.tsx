@@ -26,10 +26,23 @@ function StoryBuilderContent() {
     setShowEventComposer(true)
   }
 
-  function handleAnalyze(entityId: number, analysisType: AnalysisType) {
-    console.log('Analyzing entity:', entityId, 'Type:', analysisType)
-    // TODO: Implement analysis API calls
-    alert(`Analysis feature coming soon!\nEntity: ${entityId}\nType: ${analysisType}`)
+  async function handleAnalyze(entityId: number, analysisType: AnalysisType) {
+    try {
+      const response = await fetch(
+        `/api/story-builder/analysis?type=${analysisType}&entityId=${entityId}`,
+      )
+      if (response.ok) {
+        const results = await response.json()
+        // TODO: Display results in a modal or panel
+        console.log('Analysis results:', results)
+        alert(`Analysis completed! Check console for results.\nType: ${analysisType}`)
+      } else {
+        alert('Analysis failed')
+      }
+    } catch (error) {
+      console.error('Analysis error:', error)
+      alert('Analysis error')
+    }
   }
 
   return (

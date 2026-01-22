@@ -46,7 +46,7 @@ export interface EntityCardProps {
 /**
  * Analysis Types
  */
-export type AnalysisType = 'circular-funding' | 'self-dealing' | 'network' | 'financial-timeline'
+export type AnalysisType = 'centrality' | 'betweenness' | 'clustering' | 'components' | 'paths'
 
 /**
  * Analysis Job Status

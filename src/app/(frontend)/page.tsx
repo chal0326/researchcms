@@ -38,6 +38,9 @@ export default async function HomePage() {
           >
             Go to admin panel
           </a>
+          <a className="story-builder" href="/story-builder">
+            Story Builder
+          </a>
           <a
             className="docs"
             href="https://payloadcms.com/docs"
