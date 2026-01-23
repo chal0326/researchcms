@@ -1,13 +1,7 @@
 'use client'
 
 import { createContext, useContext, useState, useCallback, type ReactNode } from 'react'
-import type {
-  StoryBuilderState,
-  StoryBuilderView,
-  TimelineEvent,
-  Entity,
-  Mountain,
-} from '../types'
+import type { StoryBuilderState, StoryBuilderView, TimelineEvent, Entity, Mountain } from '../types'
 
 /**
  * Story Builder Context
@@ -18,6 +12,11 @@ interface StoryBuilderContextValue extends StoryBuilderState {
   setSelectedEntity: (entity: Entity | null) => void
   setActiveMountain: (mountain: Mountain | null) => void
   setIsDraft: (isDraft: boolean) => void
+  addSelectedMountain: (mountain: Mountain) => void
+  removeSelectedMountain: (mountainId: number) => void
+  addSelectedEvent: (event: TimelineEvent) => void
+  removeSelectedEvent: (eventId: string) => void
+  clearSelections: () => void
   resetState: () => void
 }
 
@@ -32,6 +31,8 @@ const initialState: StoryBuilderState = {
   selectedEntity: null,
   activeMountain: null,
   isDraft: false,
+  selectedMountains: [],
+  selectedEvents: [],
 }
 
 /**
@@ -60,6 +61,42 @@ export function StoryBuilderProvider({ children }: { children: ReactNode }) {
     setState((prev) => ({ ...prev, isDraft }))
   }, [])
 
+  const addSelectedMountain = useCallback((mountain: Mountain) => {
+    setState((prev) => ({
+      ...prev,
+      selectedMountains: [...prev.selectedMountains, mountain],
+    }))
+  }, [])
+
+  const removeSelectedMountain = useCallback((mountainId: number) => {
+    setState((prev) => ({
+      ...prev,
+      selectedMountains: prev.selectedMountains.filter((m) => m.id !== mountainId),
+    }))
+  }, [])
+
+  const addSelectedEvent = useCallback((event: TimelineEvent) => {
+    setState((prev) => ({
+      ...prev,
+      selectedEvents: [...prev.selectedEvents, event],
+    }))
+  }, [])
+
+  const removeSelectedEvent = useCallback((eventId: string) => {
+    setState((prev) => ({
+      ...prev,
+      selectedEvents: prev.selectedEvents.filter((e) => e.id !== eventId),
+    }))
+  }, [])
+
+  const clearSelections = useCallback(() => {
+    setState((prev) => ({
+      ...prev,
+      selectedMountains: [],
+      selectedEvents: [],
+    }))
+  }, [])
+
   const resetState = useCallback(() => {
     setState(initialState)
   }, [])
@@ -71,6 +108,11 @@ export function StoryBuilderProvider({ children }: { children: ReactNode }) {
     setSelectedEntity,
     setActiveMountain,
     setIsDraft,
+    addSelectedMountain,
+    removeSelectedMountain,
+    addSelectedEvent,
+    removeSelectedEvent,
+    clearSelections,
     resetState,
   }
 

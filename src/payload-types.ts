@@ -74,6 +74,7 @@ export interface Config {
     relationships: Relationship;
     'timeline-events': TimelineEvent;
     sources: Source;
+    'story-publications': StoryPublication;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -88,6 +89,7 @@ export interface Config {
     relationships: RelationshipsSelect<false> | RelationshipsSelect<true>;
     'timeline-events': TimelineEventsSelect<false> | TimelineEventsSelect<true>;
     sources: SourcesSelect<false> | SourcesSelect<true>;
+    'story-publications': StoryPublicationsSelect<false> | StoryPublicationsSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -439,6 +441,47 @@ export interface Source {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "story-publications".
+ */
+export interface StoryPublication {
+  id: number;
+  title: string;
+  description?: string | null;
+  mountains: (number | Mountain)[];
+  events: (string | TimelineEvent)[];
+  /**
+   * Date when this story was published
+   */
+  publicationDate: string;
+  /**
+   * Publication status
+   */
+  status: 'draft' | 'published' | 'archived';
+  /**
+   * Available export formats
+   */
+  exportFormats?: ('pdf' | 'html' | 'markdown' | 'json')[] | null;
+  /**
+   * Auto-generated shareable URL
+   */
+  shareUrl?: string | null;
+  /**
+   * Number of views
+   */
+  viewCount?: number | null;
+  /**
+   * User who created this publication
+   */
+  createdBy: number | User;
+  metadata?: {
+    keywords?: string[] | null;
+    coverImage?: (number | null) | Media;
+  };
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -488,6 +531,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'sources';
         value: number | Source;
+      } | null)
+    | ({
+        relationTo: 'story-publications';
+        value: number | StoryPublication;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -668,6 +715,30 @@ export interface SourcesSelect<T extends boolean = true> {
   url?: T;
   file?: T;
   citation_text?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "story-publications_select".
+ */
+export interface StoryPublicationsSelect<T extends boolean = true> {
+  title?: T;
+  description?: T;
+  mountains?: T;
+  events?: T;
+  publicationDate?: T;
+  status?: T;
+  exportFormats?: T;
+  shareUrl?: T;
+  viewCount?: T;
+  createdBy?: T;
+  metadata?:
+    | T
+    | {
+        keywords?: T;
+        coverImage?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
 }

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { getPayload } from 'payload'
 import React from 'react'
 import { fileURLToPath } from 'url'
+import StoryBuilder from '@/components/StoryBuilder'
 
 import config from '@/payload.config'
 import './styles.css'

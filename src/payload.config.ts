@@ -15,6 +15,7 @@ import { Entities } from './collections/Entities'
 import { Relationships } from './collections/Relationships'
 import { TimelineEvents } from './collections/TimelineEvents'
 import { Sources } from './collections/Sources'
+import { StoryPublications } from './collections/StoryPublications'
 import { NarrativeConfig } from './globals/NarrativeConfig'
 import { mergeEntities } from './endpoints/merge-entities'
 
@@ -51,7 +52,16 @@ export default buildConfig({
       },
     },
   },
-  collections: [Users, Media, Mountains, Entities, Relationships, TimelineEvents, Sources],
+  collections: [
+    Users,
+    Media,
+    Mountains,
+    Entities,
+    Relationships,
+    TimelineEvents,
+    Sources,
+    StoryPublications,
+  ],
   endpoints: [mergeEntities],
   globals: [NarrativeConfig],
   editor: lexicalEditor(),

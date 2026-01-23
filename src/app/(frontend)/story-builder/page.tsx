@@ -1,4 +1,4 @@
-import { StoryBuilder } from '@/components/StoryBuilder'
+import StoryBuilder from '@/components/StoryBuilder'
 
 export const metadata = {
   title: 'Story Builder - Research CMS',

@@ -22,6 +22,10 @@ export interface StoryBuilderState {
   activeMountain: Mountain | null
   /** Whether in draft mode */
   isDraft: boolean
+  /** Selected mountains for publication */
+  selectedMountains: Mountain[]
+  /** Selected events for publication */
+  selectedEvents: TimelineEvent[]
 }
 
 /**

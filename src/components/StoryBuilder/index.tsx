@@ -6,6 +6,7 @@ import { EventComposer } from './EventComposer'
 import { EntityCard } from './EntityCard'
 import { RelationshipMapper } from './RelationshipMapper'
 import { RelationshipPanel } from './RelationshipPanel'
+import { PublicationControls } from './PublicationControls'
 import type { StoryBuilderView, AnalysisType } from './types'
 import { Calendar, Network, Mountain as MountainIcon, PlusCircle, Search } from 'lucide-react'
 
@@ -69,6 +70,7 @@ function StoryBuilderContent() {
               <Search className="w-4 h-4" />
               Search
             </button>
+            <PublicationControls />
           </div>
         </div>
 
