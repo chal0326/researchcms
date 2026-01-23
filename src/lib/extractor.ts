@@ -268,6 +268,8 @@ export class GraphExtractor {
               },
             })
             const mountainId = mtnMap.get('religion') || 1 // Default to first mountain or 1
+
+            // Insert the timeline event
             await this.db
               .prepare(
                 'INSERT INTO timeline_events (id, year, month, day, title, body, original_text) VALUES (?, ?, ?, ?, ?, ?, ?)',
@@ -281,6 +283,15 @@ export class GraphExtractor {
                 bodyJson,
                 JSON.stringify(evt),
               )
+              .run()
+
+            // Create relationship to mountains
+            const eventId = `${evt.year}-${evt.title.replace(/[^a-zA-Z0-9]/g, '-')}`
+            await this.db
+              .prepare(
+                'INSERT INTO timeline_events_rels (parent_id, mountains_id, order) VALUES (?, ?, ?)',
+              )
+              .bind(eventId, mountainId, 0)
               .run()
           }
         } catch (e) {
